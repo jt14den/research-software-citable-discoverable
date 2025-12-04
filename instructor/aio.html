@@ -245,7 +245,79 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="sharing-software.html">1. </a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="open-source-license.html">2. </a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="making-software-citable.html">3. </a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="adding-citation-file.html">4. </a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="improving-metadata-discoverability.html">5. </a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="why-software-citation.html">6. Why Make Software Citable?</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="wrap-up-reflect.html">7. </a>
     </div>
 <!--/div.accordion-header-->
 
@@ -309,12 +381,706 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-introduction"><p>Content from <a href="introduction.html">Using Markdown</a></p>
+<section id="aio-sharing-software"><p>Content from <a href="sharing-software.html"></a></p>
 <hr>
-<p>Last updated on 2025-07-11 |
+<p>Last updated on 2025-12-04 |
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
+        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml/edit/main/episodes/sharing-software.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<hr>
+<p>title: “Sharing Software Publicly” teaching: 10 exercises: 5 —</p>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Why is it important to share software in a public repository?</li>
+<li>What are the minimum steps needed to make a GitHub repository useful
+to others?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain the benefits of using a public code repository</li>
+<li>Demonstrate how to create and populate a basic GitHub
+repository</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>Hosting your code in a public version-controlled repository increases
+its visibility, ensures transparency, and allows others to cite or build
+on your work. GitHub is a widely-used platform for sharing research
+software.</p>
+<p>Repositories with README files, clear names, and project structure
+are easier to find and reuse.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p>If learners are new to GitHub, show examples of well-documented repos
+first. Encourage participants to navigate to a sample repo.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-what-makes-a-repository-useful" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-what-makes-a-repository-useful" class="callout-inner">
+<h3 class="callout-title">Challenge 1: What Makes a Repository
+Useful?</h3>
+<div class="callout-content">
+<p>Visit a GitHub repository for a research project. What information is
+helpful? What is missing?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>Helpful elements may include: README file, license, list of
+contributors, installation instructions, and usage examples. Missing
+items might be unclear documentation or no stated license.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-create-a-minimal-github-repo" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-create-a-minimal-github-repo" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Create a Minimal GitHub Repo</h3>
+<div class="callout-content">
+<p>Create a public repository, add a README, and commit at least one
+file.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Participants can use GitHub’s web interface to:</p>
+<ol style="list-style-type: decimal">
+<li>Click “New Repository”</li>
+<li>Add a project name and description</li>
+<li>Initialize with README (and optionally a license)</li>
+<li>Add a file via the UI or push from a local machine</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Public repositories make your software findable and accessible</li>
+<li>A good README increases clarity and reuse</li>
+<li>Even simple repositories can boost your research visibility</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-open-source-license"><p>Content from <a href="open-source-license.html"></a></p>
+<hr>
+<p>Last updated on 2025-12-04 |
+
+        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml/edit/main/episodes/open-source-license.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<hr>
+<p>title: “Applying an Open Source License” teaching: 8 exercises: 5
+—</p>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Why do you need a license for your code?</li>
+<li>How can an open-source license increase reuse and citation?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain the legal importance of software licensing</li>
+<li>Choose and apply an open-source license to a code repository</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>Without a license, your code is “all rights reserved” by default —
+meaning others cannot legally reuse, modify, or redistribute it. Adding
+a license signals to others how they can use your work and increases
+trust and adoption.</p>
+<p>Open-source licenses like MIT, Apache 2.0, or GPL let others build on
+your work while ensuring proper attribution.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Briefly review the difference between permissive and copyleft
+licenses if there’s time. Focus on showing how easy it is to add a
+license file via GitHub.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-what-happens-without-a-license" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-what-happens-without-a-license" class="callout-inner">
+<h3 class="callout-title">Challenge 1: What Happens Without a
+License?</h3>
+<div class="callout-content">
+<p>Imagine someone wants to use your script in their project. What are
+the risks if there’s no license file?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Legally, they cannot reuse or redistribute it. This may discourage
+collaboration or citation. Adding a license removes this barrier.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-add-a-license-to-your-repo" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-add-a-license-to-your-repo" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Add a License to Your Repo</h3>
+<div class="callout-content">
+<p>Use GitHub’s license selector to add a license to your project.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>On your repository page, click “Add file” → “Create new file”</li>
+<li>Name the file <code>LICENSE</code>
+</li>
+<li>GitHub provides a license template dropdown — choose MIT, Apache
+2.0, or another</li>
+<li>Commit the file</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Without a license, others cannot legally use your code</li>
+<li>Open-source licenses promote reuse and increase citability</li>
+<li>Adding a license takes just a few clicks on GitHub</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-making-software-citable"><p>Content from <a href="making-software-citable.html"></a></p>
+<hr>
+<p>Last updated on 2025-12-04 |
+
+        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml/edit/main/episodes/making-software-citable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<hr>
+<p>title: “Making Software Citable with a DOI” teaching: 10 exercises: 5
+—</p>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What is a DOI and why does it matter for software?</li>
+<li>How can you generate a DOI for your code on GitHub?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain the role of DOIs in software citation</li>
+<li>Archive a GitHub repository with Zenodo to generate a DOI</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>A Digital Object Identifier (DOI) provides a permanent, citable
+reference to a specific version of your software. Archiving your GitHub
+repository with Zenodo is a simple way to mint a DOI and increase the
+visibility and credibility of your code.</p>
+<p>This also supports reproducibility: others can cite and use the exact
+version you used in your research.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p>If participants don’t have a Zenodo account yet, have them watch or
+follow along. Mention that Zenodo is free and integrates directly with
+GitHub.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-why-versioned-dois" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-why-versioned-dois" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Why Versioned DOIs?</h3>
+<div class="callout-content">
+<p>Why is it important to generate DOIs for specific software
+versions?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>Versioned DOIs let others cite the exact code version used in a
+study, ensuring reproducibility and avoiding ambiguity about features or
+bugs.</p>
+</div>
+</div>
+</div>
+</div>
+</section><div class="section level2 challege">
+<h2 id="challenge-2-create-a-doi-with-zenodo">Challenge 2: Create a DOI with Zenodo<a class="anchor" aria-label="anchor" href="#challenge-2-create-a-doi-with-zenodo"></a>
+</h2>
+<p>Link your GitHub repository to Zenodo and archive your first
+release.</p>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>Sign in at <a href="https://zenodo.org" class="external-link">https://zenodo.org</a> using
+GitHub</li>
+<li>Authorize Zenodo to access your GitHub repositories</li>
+<li>In GitHub, create a tagged release (e.g. v1.0.0)</li>
+<li>Zenodo will archive the release and assign a DOI</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>DOIs make software citable in scholarly work</li>
+<li>Zenodo can generate DOIs for GitHub repositories</li>
+<li>Version-specific DOIs support reproducibility</li>
+</ul>
+</div>
+</div>
+</div></section><section id="aio-adding-citation-file"><p>Content from <a href="adding-citation-file.html"></a></p>
+<hr>
+<p>Last updated on 2025-12-04 |
+
+        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml/edit/main/episodes/adding-citation-file.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<hr>
+<p>title: “Adding a CITATION File” teaching: 8 exercises: 5 —</p>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What is a CITATION file and why is it important?</li>
+<li>How can you tell others how to cite your software directly on
+GitHub?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Describe the purpose of a CITATION.cff file</li>
+<li>Add and customize a CITATION.cff file to enable GitHub citation
+features</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>A <code>CITATION.cff</code> file provides citation metadata directly
+in your repository. When added to GitHub, it enables the “Cite this
+repository” button, making it easy for users to grab a properly
+formatted citation.</p>
+<p>This file can include author names, ORCID IDs, version numbers, DOIs,
+and preferred citation formats.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p>Mention that the <code>.cff</code> file is readable and editable as
+plain text. If time allows, demo GitHub’s built-in citation UI once the
+file is present.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-what-should-a-citation-file-include" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-what-should-a-citation-file-include" class="callout-inner">
+<h3 class="callout-title">Challenge 1: What Should a Citation File
+Include?</h3>
+<div class="callout-content">
+<p>What metadata should you include in a CITATION.cff file?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>Include: title, authors (with ORCID), version, release date, DOI, and
+a preferred citation format or publication if relevant.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-add-a-citation.cff-file" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-add-a-citation.cff-file" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Add a CITATION.cff File</h3>
+<div class="callout-content">
+<p>Create a <code>CITATION.cff</code> file in your GitHub repo with
+minimal metadata.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>In the root of your repository, create a new file named
+<code>CITATION.cff</code>
+</li>
+<li>Add content such as:</li>
+</ol>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> Doe</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> Jane</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> https://orcid.org/0000-0002-1825-0097</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> MyResearchSoftware</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0.0</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="fu">doi</span><span class="kw">:</span><span class="at"> 10.5281/zenodo.1234567</span></span></code></pre>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Commit the file and refresh the repo page to see “Cite this
+repository”</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>CITATION.cff files make citation info visible and usable</li>
+<li>GitHub displays citation options when this file is present</li>
+<li>Use ORCID, DOI, and version info to ensure accurate credit</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-improving-metadata-discoverability"><p>Content from <a href="improving-metadata-discoverability.html"></a></p>
+<hr>
+<p>Last updated on 2025-12-04 |
+
+        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml/edit/main/episodes/improving-metadata-discoverability.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<hr>
+<p>title: “Improving Metadata and Discoverability” teaching: 10
+exercises: 5 —</p>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What metadata helps make your software easier to find and
+reuse?</li>
+<li>How can you enhance discoverability across scholarly platforms?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Identify key metadata that improves software visibility</li>
+<li>Add discoverability features to your GitHub and Zenodo records</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>Good metadata and documentation help others understand, find, and
+cite your software. Descriptive information like keywords, author
+ORCIDs, and links to related works make your project easier to find on
+GitHub, Zenodo, and in scholarly indexes.</p>
+<p>Providing this context also supports FAIR principles and increases
+the likelihood your software will be reused.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Encourage learners to think of their software like a paper: title,
+abstract, authors, keywords, related works. Show examples from GitHub
+and Zenodo repositories.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-what-makes-metadata-useful" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-what-makes-metadata-useful" class="callout-inner">
+<h3 class="callout-title">Challenge 1: What Makes Metadata Useful?</h3>
+<div class="callout-content">
+<p>List three metadata elements you would add to improve a software
+repository’s discoverability.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Examples: keywords, author ORCID IDs, funding acknowledgments,
+related article DOI, software description.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-enhance-your-zenodo-record" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-enhance-your-zenodo-record" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Enhance Your Zenodo Record</h3>
+<div class="callout-content">
+<p>After generating a DOI via Zenodo, update the metadata fields in your
+record.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>Go to your Zenodo record</li>
+<li>Click “Edit”</li>
+<li>Add keywords, ORCID IDs, description, publication references, and
+funding info</li>
+<li>Save the changes</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Metadata improves findability and reusability</li>
+<li>Add author identifiers, keywords, and related works to GitHub and
+Zenodo</li>
+<li>Well-described software is easier to discover and cite</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-why-software-citation"><p>Content from <a href="why-software-citation.html">Why Make Software Citable?</a></p>
+<hr>
+<p>Last updated on 2025-12-04 |
+
+        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml/edit/main/episodes/why-software-citation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -326,8 +1092,8 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>Why should research software be treated as a scholarly product?</li>
+<li>What are the benefits of making software citable?</li>
 </ul>
 </div>
 </div>
@@ -337,9 +1103,10 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Explain the importance of software citation for scholarly
+communication</li>
+<li>Identify how citation supports transparency, reproducibility, and
+credit</li>
 </ul>
 </div>
 </div>
@@ -349,25 +1116,122 @@ challenge blocks</li>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
+<p>Software plays a critical role in research but has historically been
+under-recognized. Treating software as a citable output ensures proper
+attribution, improves transparency, and supports reproducibility.</p>
+<p>Citing software with DOIs and formal metadata allows others to
+reference specific versions and gives creators academic credit.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Ask participants if they’ve ever reused software without citing it,
+or struggled to find or cite code used in a paper. This helps them
+connect to the motivation.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-who-gets-credit" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-who-gets-credit" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Who Gets Credit?</h3>
+<div class="callout-content">
+<p>You’ve created a Python script that was used to generate results in a
+collaborative paper. The paper cites the dataset, but not the script.
+What’s missing?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>The script should be citable so that others can properly credit its
+use. Without citation metadata or a DOI, the software may go
+unrecognized.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Software is a scholarly product that should be citable</li>
+<li>Citation provides academic credit and supports reproducibility</li>
+<li>DOIs and metadata are essential for persistent, findable
+citation</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-wrap-up-reflect"><p>Content from <a href="wrap-up-reflect.html"></a></p>
+<hr>
+<p>Last updated on 2025-12-04 |
+
+        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml/edit/main/episodes/wrap-up-reflect.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<hr>
+<p>title: “Wrap-Up and Reflection” teaching: 5 exercises: 5 —</p>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What small steps can make your research software more citable and
+discoverable?</li>
+<li>How can you apply these practices to your current or future
+projects?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Reflect on the practical steps taken during the session</li>
+<li>Identify at least one improvement to apply in your own software
+projects</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>Over this session, you’ve learned how to make your research software
+more visible, citable, and impactful. These small, practical steps
+support scholarly communication, reproducibility, and the FAIR
+principles.</p>
+<p>Use this time to reflect on what you’ve learned and decide on one
+action you’ll take with your own project.</p>
 <div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
@@ -375,57 +1239,49 @@ reinforce the objectives.</li>
 </button>
 <div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
-<p>Inline instructor notes can help inform instructors of timing
-challenges associated with the lessons. They appear in the “Instructor
-View”</p>
+<p>Give learners a few minutes of quiet reflection, then facilitate a
+group discussion. Invite volunteers to share a step they plan to take
+next.</p>
 </div>
 </div>
 </div>
 </div>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+<div id="challenge-1-choose-your-next-step" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<div id="challenge-1-choose-your-next-step" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Choose Your Next Step</h3>
 <div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
+<p>Which of the practices from today’s session will you apply to a
+current or future project?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<p>Answers may vary: making a repo public, adding a license, archiving
+on Zenodo, writing a README, creating a CITATION file, etc.</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<div id="challenge-2-find-a-fair-win" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
+<div id="challenge-2-find-a-fair-win" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Find a FAIR Win</h3>
 <div class="callout-content">
-
+<p>Think of one thing you can do in under 30 minutes to make your
+software more FAIR.</p>
 </div>
 </div>
 </div>
@@ -436,42 +1292,17 @@ challenge blocks?</h3>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
+<p>Examples:</p>
+<ul>
+<li>Add a LICENSE file</li>
+<li>Write a short README</li>
+<li>Register your ORCID on Zenodo</li>
+<li>Create a GitHub release</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -480,14 +1311,11 @@ this:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>Even small actions can significantly improve your software’s
+impact</li>
+<li>Making code citable and discoverable benefits both you and the
+research community</li>
+<li>Start with one change, then build from there</li>
 </ul>
 </div>
 </div>
@@ -509,11 +1337,11 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
+        | <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
         | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
@@ -536,15 +1364,15 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
+  "@id": "https://jt14den.github.io/research-software-citable-discoverable/instructor/aio.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries",
   "name": "All in One View",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
+  "url": "https://jt14den.github.io/research-software-citable-discoverable/instructor/aio.html",
+  "identifier": "https://jt14den.github.io/research-software-citable-discoverable/instructor/aio.html",
   "dateCreated": "2025-12-04",
   "dateModified": "2025-12-04",
   "datePublished": "2025-12-04"
