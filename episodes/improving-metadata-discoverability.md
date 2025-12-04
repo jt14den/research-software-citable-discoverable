@@ -42,6 +42,9 @@ List three metadata elements you would add to improve a software repository’s 
 Examples: keywords, author ORCID IDs, funding acknowledgments, related article DOI, software description.
 
 :::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 2: Enhance Your Zenodo Record
 
@@ -55,6 +58,8 @@ After generating a DOI via Zenodo, update the metadata fields in your record.
 4. Save the changes
 
 :::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
