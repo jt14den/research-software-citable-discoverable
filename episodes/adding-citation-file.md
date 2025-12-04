@@ -42,6 +42,10 @@ What metadata should you include in a CITATION.cff file?
 Include: title, authors (with ORCID), version, release date, DOI, and a preferred citation format or publication if relevant.
 
 :::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
+
+
+:::::::::::::::::::::::::::::::::
 
 ## Challenge 2: Add a CITATION.cff File
 
@@ -65,6 +69,8 @@ doi: 10.5281/zenodo.1234567
 3. Commit the file and refresh the repo page to see "Cite this repository"
 
 :::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
