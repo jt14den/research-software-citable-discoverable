@@ -42,7 +42,10 @@ Why is it important to generate DOIs for specific software versions?
 Versioned DOIs let others cite the exact code version used in a study, ensuring reproducibility and avoiding ambiguity about features or bugs.
 
 :::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
 
+
+::::::::::::::::::::::::::::::::: challege
 ## Challenge 2: Create a DOI with Zenodo
 
 Link your GitHub repository to Zenodo and archive your first release.
@@ -54,6 +57,7 @@ Link your GitHub repository to Zenodo and archive your first release.
 3. In GitHub, create a tagged release (e.g. v1.0.0)
 4. Zenodo will archive the release and assign a DOI
 
+:::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
