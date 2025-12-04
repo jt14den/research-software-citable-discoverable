@@ -34,7 +34,7 @@ life_cycle: 'pre-alpha' # FIXME
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-md' # FIXME
+source: 'https://github.com/jt14den/research-software-citable-discoverable/edit/main/config.yaml' # FIXME
 
 # Default branch of your lesson
 branch: 'main'
@@ -66,7 +66,13 @@ contact: 'team@carpentries.org' # FIXME
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.md
+- sharing-software.md
+- open-source-license.md
+- making-software-citable.md
+- adding-citation-file.md
+- improving-metadata-discoverability.md
+- why-software-citation.md
+- wrap-up-reflect.md
 
 # Information for Learners
 learners: 
