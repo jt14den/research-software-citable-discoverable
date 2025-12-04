@@ -42,7 +42,9 @@ Visit a GitHub repository for a research project. What information is helpful? W
 Helpful elements may include: README file, license, list of contributors, installation instructions, and usage examples. Missing items might be unclear documentation or no stated license.
 
 :::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::: challenge
 ## Challenge 2: Create a Minimal GitHub Repo
 
 Create a public repository, add a README, and commit at least one file.
@@ -56,6 +58,7 @@ Participants can use GitHub’s web interface to:
 3. Initialize with README (and optionally a license)
 4. Add a file via the UI or push from a local machine
 
+:::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
