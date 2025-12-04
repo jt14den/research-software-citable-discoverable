@@ -42,7 +42,9 @@ Imagine someone wants to use your script in their project. What are the risks if
 Legally, they cannot reuse or redistribute it. This may discourage collaboration or citation. Adding a license removes this barrier.
 
 :::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::: challenge
 ## Challenge 2: Add a License to Your Repo
 
 Use GitHub’s license selector to add a license to your project.
@@ -54,6 +56,7 @@ Use GitHub’s license selector to add a license to your project.
 3. GitHub provides a license template dropdown — choose MIT, Apache 2.0, or another
 4. Commit the file
 
+:::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
