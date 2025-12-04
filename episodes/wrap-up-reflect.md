@@ -42,7 +42,9 @@ Which of the practices from today’s session will you apply to a current or fut
 Answers may vary: making a repo public, adding a license, archiving on Zenodo, writing a README, creating a CITATION file, etc.
 
 :::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::: challenge
 ## Challenge 2: Find a FAIR Win
 
 Think of one thing you can do in under 30 minutes to make your software more FAIR.
@@ -56,6 +58,7 @@ Examples:
 * Register your ORCID on Zenodo
 * Create a GitHub release
 
+:::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
