@@ -245,7 +245,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="sharing-software.html">1. Sharing Software Publicly</a>
+        <a href="sharing-software.html">1. Sharing Research Software Effectively</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -257,7 +257,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="managing-environments-pixi.html">2. Managing Reproducible Environments with pixi</a>
+        <a href="open-source-license.html">2. Choosing an Open-Source License</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -269,7 +269,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="open-source-license.html">3. Applying an Open Source License</a>
+        <a href="managing-environments-pixi.html">3. Managing Reproducible Environments with pixi</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -281,7 +281,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="making-software-citable.html">4. Making Software Citable with a DOI</a>
+        <a href="adding-citation-file.html">4. Adding a CITATION.cff File</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -293,7 +293,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="adding-citation-file.html">5. Adding a CITATION File</a>
+        <a href="making-software-citable.html">5. Making Your Software Citable</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -393,49 +393,61 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="sharing-software"><h2 class="section-heading"><a href="sharing-software.html">Sharing Software Publicly</a></h2>
+<section id="sharing-software"><h2 class="section-heading"><a href="sharing-software.html">Sharing Research Software Effectively</a></h2>
 <hr class="half-width">
 <ul>
-<li>Public repositories make your software findable and accessible</li>
-<li>A good README increases clarity and reuse</li>
-<li>Even simple repositories can boost your research visibility</li>
-</ul></section><section id="managing-environments-pixi"><h2 class="section-heading"><a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></h2>
+<li>Public repositories increase findability, reuse potential, and
+citation credit.<br>
+</li>
+<li>A well-structured repository lowers the barrier for others to
+understand your work.<br>
+</li>
+<li>The lesson begins with a minimal “before” repository that will be
+incrementally improved.</li>
+</ul></section><section id="open-source-license"><h2 class="section-heading"><a href="open-source-license.html">Choosing an Open-Source License</a></h2>
+<hr class="half-width"></section><section id="managing-environments-pixi"><h2 class="section-heading"><a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></h2>
 <hr class="half-width">
 <ul>
-<li>Environments are essential for reproducible, citable research
-software.</li>
+<li>Reproducible environments reduce troubleshooting and support more
+reusable software.</li>
 <li>
-<code>pixi</code> provides fast, language-agnostic environment
-management for Python and R.</li>
-<li>The <code>pixi.toml</code> file documents dependencies that support
-FAIR4RS principles.</li>
-<li>Use <code>pixi run</code> to execute code inside a clean and
+<code>pixi</code> provides fast, cross platform environment
+management.</li>
+<li>The <code>pixi.toml</code> file acts as documentation that supports
+citation and FAIR4RS principles.</li>
+<li>Use <code>pixi run</code> to execute Python or R code inside a
 reproducible environment.</li>
-</ul></section><section id="open-source-license"><h2 class="section-heading"><a href="open-source-license.html">Applying an Open Source License</a></h2>
+</ul></section><section id="adding-citation-file"><h2 class="section-heading"><a href="adding-citation-file.html">Adding a CITATION.cff File</a></h2>
 <hr class="half-width">
 <ul>
-<li>Without a license, others cannot legally use your code</li>
-<li>Open-source licenses promote reuse and increase citability</li>
-<li>Adding a license takes just a few clicks on GitHub</li>
-</ul></section><section id="making-software-citable"><h2 class="section-heading"><a href="making-software-citable.html">Making Software Citable with a DOI</a></h2>
+<li>A CITATION.cff file is the foundation of software citation.</li>
+<li>It can be added before releases, DOIs, or version tags.</li>
+<li>GitHub displays machine-readable citations automatically when this
+file is present.</li>
+<li>Start simple and expand over time as your project develops.</li>
+</ul></section><section id="making-software-citable"><h2 class="section-heading"><a href="making-software-citable.html">Making Your Software Citable</a></h2>
 <hr class="half-width">
 <ul>
-<li>DOIs make software citable in scholarly work</li>
-<li>Zenodo can generate DOIs for GitHub repositories</li>
-<li>Version-specific DOIs support reproducibility</li>
-</ul></section><section id="adding-citation-file"><h2 class="section-heading"><a href="adding-citation-file.html">Adding a CITATION File</a></h2>
-<hr class="half-width">
-<ul>
-<li>CITATION.cff files make citation info visible and usable</li>
-<li>GitHub displays citation options when this file is present</li>
-<li>Use ORCID, DOI, and version info to ensure accurate credit</li>
+<li>Software is citable as soon as it includes a citation file and a
+stable version.<br>
+</li>
+<li>GitHub releases create versioned snapshots for citation.<br>
+</li>
+<li>DOIs are optional but strengthen discoverability, persistence, and
+reproducibility.<br>
+</li>
+<li>Zenodo can automatically mint a DOI for each GitHub release.</li>
 </ul></section><section id="improving-metadata-discoverability"><h2 class="section-heading"><a href="improving-metadata-discoverability.html">Improving Metadata and Discoverability</a></h2>
 <hr class="half-width">
 <ul>
-<li>Metadata improves findability and reusability</li>
-<li>Add author identifiers, keywords, and related works to GitHub and
-Zenodo</li>
-<li>Well-described software is easier to discover and cite</li>
+<li>Metadata increases discoverability in GitHub, Zenodo, and scholarly
+indexes.<br>
+</li>
+<li>Use consistent information across CITATION.cff, README, GitHub
+topics, and Zenodo.<br>
+</li>
+<li>Thoughtful metadata supports FAIR principles and helps others reuse
+your software.</li>
 </ul></section><section id="why-software-citation"><h2 class="section-heading"><a href="why-software-citation.html">Why Make Software Citable?</a></h2>
 <hr class="half-width">
 <ul>

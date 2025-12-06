@@ -207,7 +207,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="sharing-software.html">1. Sharing Software Publicly</a>
+        <a href="sharing-software.html">1. Sharing Research Software Effectively</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -216,7 +216,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="managing-environments-pixi.html">2. Managing Reproducible Environments with pixi</a>
+        <a href="open-source-license.html">2. Choosing an Open-Source License</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -225,7 +225,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="open-source-license.html">3. Applying an Open Source License</a>
+        <a href="managing-environments-pixi.html">3. Managing Reproducible Environments with pixi</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -234,7 +234,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="making-software-citable.html">4. Making Software Citable with a DOI</a>
+        <a href="adding-citation-file.html">4. Adding a CITATION.cff File</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -243,7 +243,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="adding-citation-file.html">5. Adding a CITATION File</a>
+        <a href="making-software-citable.html">5. Making Your Software Citable</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -263,6 +263,9 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
+<li><a href="#what-counts-as-useful-metadata">What counts as useful metadata?</a></li>
+<li><a href="#github-specific-discoverability-features">GitHub-specific discoverability features</a></li>
+<li><a href="#zenodo-and-doi-metadata">Zenodo and DOI metadata</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -329,14 +332,14 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/adding-citation-file.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="../instructor/making-software-citable.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/why-software-citation.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="../instructor/adding-citation-file.html" rel="prev">
+        <a class="chapter-link" href="../instructor/making-software-citable.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Adding a CITATION
+          Previous: Making Your Software
         </a>
         <a class="chapter-link float-end" href="../instructor/why-software-citation.html" rel="next">
           Next: Why Make Software...
@@ -366,9 +369,9 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What metadata helps make your software easier to find and
-reuse?</li>
-<li>How can you enhance discoverability across scholarly platforms?</li>
+<ul><li>What metadata makes research software easier to find and reuse?</li>
+<li>How can we improve discoverability across GitHub, Zenodo, and
+scholarly indexes?</li>
 </ul></div>
 </div>
 </div>
@@ -376,44 +379,111 @@ reuse?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Identify key metadata that improves software visibility</li>
-<li>Add discoverability features to your GitHub and Zenodo records</li>
+<ul><li>Identify key metadata elements that increase visibility and
+reuse.</li>
+<li>Enhance discoverability using GitHub features and Zenodo metadata
+fields.</li>
+<li>Connect metadata across CITATION.cff, GitHub, and your DOI record
+for consistency.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
-<hr class="half-width"><p>Good metadata and documentation help others understand, find, and
-cite your software. Descriptive information like keywords, author
-ORCIDs, and links to related works make your project easier to find on
-GitHub, Zenodo, and in scholarly indexes.</p>
-<p>Providing this context also supports FAIR principles and increases
-the likelihood your software will be reused.</p>
+<hr class="half-width"><p>Clear metadata helps others understand, evaluate, and <em>find</em>
+your software.<br>
+It also reduces the cognitive effort for future users because essential
+information is organized and easy to locate.</p>
+<p>In earlier episodes, you created:</p>
+<ul><li>a <strong>CITATION.cff</strong> file<br></li>
+<li>a <strong>license</strong><br></li>
+<li>a <strong>repository structure</strong><br></li>
+<li>a <strong>Zenodo record with a DOI</strong>
+</li>
+</ul><p>This episode brings these together. You will describe your project in
+consistent ways across platforms so search engines, citation tools, and
+colleagues can discover it.</p>
 <div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
-<p>Encourage learners to think of their software like a paper: title,
-abstract, authors, keywords, related works. Show examples from GitHub
-and Zenodo repositories.</p>
+<p>Encourage learners to compare well-described repositories with sparse
+ones.<br>
+Highlight how even small metadata additions increase visibility in
+GitHub search, Zenodo indexing, and DataCite services.</p>
 </div>
 </div>
 </div>
 </div>
-<div id="challenge-1-what-makes-metadata-useful" class="callout challenge">
+</section><section><h2 class="section-heading" id="what-counts-as-useful-metadata">What counts as useful metadata?<a class="anchor" aria-label="anchor" href="#what-counts-as-useful-metadata"></a></h2>
+<hr class="half-width"><p>Good metadata answers predictable questions with minimal effort from
+the reader:</p>
+<ul><li>
+<strong>What is this software?</strong> (short description or
+abstract)</li>
+<li>
+<strong>Who made it?</strong> (authors, ORCIDs)</li>
+<li>
+<strong>How do I cite it?</strong> (CITATION.cff + DOI)</li>
+<li>
+<strong>What domain is it for?</strong> (keywords)</li>
+<li>
+<strong>What else does it relate to?</strong>
+<ul><li>related article DOI<br></li>
+<li>datasets used<br></li>
+<li>funding source<br></li>
+<li>project website</li>
+</ul></li>
+</ul><p>You may add these in multiple places, but they should remain
+consistent.</p>
+<hr></section><section><h2 class="section-heading" id="github-specific-discoverability-features">GitHub-specific discoverability features<a class="anchor" aria-label="anchor" href="#github-specific-discoverability-features"></a></h2>
+<hr class="half-width"><p>GitHub uses structured metadata to improve search ranking and
+cross-repository linking.</p>
+<p><strong>Add these items in
+<code>Settings → General → Topics</code>:</strong></p>
+<ul><li>discipline tags (e.g., <code>geospatial</code>,
+<code>text-mining</code>, <code>materials-science</code>)</li>
+<li>methodological tags (<code>simulation</code>,
+<code>visualization</code>, <code>machine-learning</code>)</li>
+<li>language tags (<code>python</code>, <code>r</code>)</li>
+</ul><p><strong>Improve your README:</strong></p>
+<p>Your README is the first page many users see. Include:</p>
+<ul><li>purpose statement<br></li>
+<li>short example of usage<br></li>
+<li>link to your CITATION.cff<br></li>
+<li>link to your Zenodo DOI<br></li>
+<li>link to your documentation</li>
+</ul><p>This connects your metadata across platforms.</p>
+<hr></section><section><h2 class="section-heading" id="zenodo-and-doi-metadata">Zenodo and DOI metadata<a class="anchor" aria-label="anchor" href="#zenodo-and-doi-metadata"></a></h2>
+<hr class="half-width"><p>Zenodo metadata flows into:</p>
+<ul><li>
+<strong>DataCite</strong><br></li>
+<li>Google Scholar<br></li>
+<li>library catalogs<br></li>
+<li>domain repositories that harvest DOIs</li>
+</ul><p>Add or refine:</p>
+<ul><li>authors + ORCIDs<br></li>
+<li>keywords<br></li>
+<li>related works (DOIs, URLs)<br></li>
+<li>funding references<br></li>
+<li>version notes<br></li>
+<li>a readable software description</li>
+</ul><p>Your goal is <em>context</em>. This helps researchers decide quickly
+whether to reuse your work.</p>
+<div id="challenge-1-identify-useful-metadata" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-what-makes-metadata-useful" class="callout-inner">
-<h3 class="callout-title">Challenge 1: What Makes Metadata Useful?</h3>
+<div id="challenge-1-identify-useful-metadata" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Identify Useful Metadata</h3>
 <div class="callout-content">
-<p>List three metadata elements you would add to improve a software
-repository’s discoverability.</p>
+<p>List three elements you would add to improve a repository’s
+discoverability.</p>
 </div>
 </div>
 </div>
@@ -422,24 +492,28 @@ repository’s discoverability.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>Examples: keywords, author ORCID IDs, funding acknowledgments,
-related article DOI, software description.</p>
+<p>Examples:</p>
+<ul><li>ORCID IDs for each author<br></li>
+<li>Keywords describing the domain and function<br></li>
+<li>A link to a related article or dataset<br></li>
+<li>A project description in your README<br></li>
+<li>Funding acknowledgment</li>
+</ul></div>
 </div>
 </div>
 </div>
-</div>
-<div id="challenge-2-enhance-your-zenodo-record" class="callout challenge">
+<div id="challenge-2-improve-your-zenodo-record" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-enhance-your-zenodo-record" class="callout-inner">
-<h3 class="callout-title">Challenge 2: Enhance Your Zenodo Record</h3>
+<div id="challenge-2-improve-your-zenodo-record" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Improve Your Zenodo Record</h3>
 <div class="callout-content">
-<p>After generating a DOI via Zenodo, update the metadata fields in your
-record.</p>
+<p>After generating a DOI in the earlier episode, expand its
+metadata:</p>
 </div>
 </div>
 </div>
@@ -448,13 +522,18 @@ record.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li>Go to your Zenodo record</li>
-<li>Click “Edit”</li>
-<li>Add keywords, ORCID IDs, description, publication references, and
-funding info</li>
-<li>Save the changes</li>
+<ol style="list-style-type: decimal"><li>Open your Zenodo record.<br></li>
+<li>Select “Edit.”<br></li>
+<li>Add:
+<ul><li>keywords<br></li>
+<li>authors and ORCIDs<br></li>
+<li>description<br></li>
+<li>related publication DOIs<br></li>
+<li>funding<br></li>
+</ul></li>
+<li>Save and publish the updated record.</li>
 </ol></div>
 </div>
 </div>
@@ -466,10 +545,12 @@ funding info</li>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Metadata improves findability and reusability</li>
-<li>Add author identifiers, keywords, and related works to GitHub and
-Zenodo</li>
-<li>Well-described software is easier to discover and cite</li>
+<ul><li>Metadata increases discoverability in GitHub, Zenodo, and scholarly
+indexes.<br></li>
+<li>Use consistent information across CITATION.cff, README, GitHub
+topics, and Zenodo.<br></li>
+<li>Thoughtful metadata supports FAIR principles and helps others reuse
+your software.</li>
 </ul></div>
 </div>
 </div>
@@ -479,14 +560,14 @@ any links that you are not going to use.
  -->
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/adding-citation-file.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="../instructor/making-software-citable.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/why-software-citation.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="../instructor/adding-citation-file.html" rel="prev">
+        <a class="chapter-link" href="../instructor/making-software-citable.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Adding a CITATION
+          Previous: Making Your Software
         </a>
         <a class="chapter-link float-end" href="../instructor/why-software-citation.html" rel="next">
           Next: Why Make Software...
