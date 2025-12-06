@@ -2,53 +2,115 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
+## Software and Accounts Needed
 
-## Data Sets
+Before starting the lesson, please make sure you have access to:
 
-<!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
--->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
+- **A GitHub account** — required for editing files, adding a CITATION.cff, and improving repository metadata  
+- **Git** — for basic version control tasks and interacting with repositories  
+- **A text editor** (such as VS Code, VS Codium, Atom, Sublime, or a built-in editor)  
+- **pixi (optional but recommended)** — a lightweight tool for creating reproducible environments if you want to test packaging or run example code  
+- **A web browser** — for GitHub-based workflows
 
-## Software Setup
+This lesson does **not** require heavy coding, installation of full scientific environments, or running large datasets.  
+All essential tasks can be performed directly in GitHub’s web interface.
 
-::::::::::::::::::::::::::::::::::::::: discussion
+Learners who want to experiment with environment files or run small examples locally may choose to install pixi.
 
-### Details
+---
 
-Setup for different systems can be presented in dropdown menus via a `spoiler`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
+## Recommended Tools
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::
+### Visual Studio Code (VS Code)
+A convenient editor with integrated terminal support.  
+Download from: https://code.visualstudio.com/
 
-:::::::::::::::: spoiler
+### Git
+Most systems already include Git. If not, installation instructions are available at:  
+https://git-scm.com/downloads
 
-### Windows
+Windows users may prefer **Git for Windows**, which includes Git Bash.
 
-Use PuTTY
+### pixi (optional)
+pixi is a fast, modern environment and package manager that helps create reproducible project environments.  
+Installation instructions:  
+https://pixi.sh/latest/
 
-::::::::::::::::::::::::
+If pixi is not installed, all core lesson activities will still work.
 
-:::::::::::::::: spoiler
+---
 
-### MacOS
+## Lesson Data and Example Repositories
 
-Use Terminal.app
+This lesson uses **small example repositories** hosted on GitHub.  
+They include:
 
-::::::::::::::::::::::::
+- a minimal research-software project with missing metadata  
+- a version that includes a CITATION.cff  
+- examples of README, license files, and basic folder structure
+
+You will be provided links at the start of the workshop.  
+No large datasets or downloads are required.
+
+---
+
+## What To Check Before the Workshop
+
+Please ensure the following commands work in your terminal:
+
+``` bash
+git --version
+```
+
+If you choose to install pixi:
+
+``` bash
+pixi --version
+```
 
 
-:::::::::::::::: spoiler
+These commands confirm Git and pixi are correctly installed.
 
-### Linux
+---
 
-Use Terminal
+## Authentication Notes
 
-::::::::::::::::::::::::
+GitHub now supports streamlined login through the browser.  
+If you're prompted to authenticate:
 
+- follow the link that appears in the terminal  
+- sign in using your GitHub credentials  
+- return to the terminal when authorization completes
+
+You do **not** need SSH keys or personal access tokens for this lesson.
+
+---
+
+::::::::::::::::::::: instructor
+
+### Instructor Notes
+
+**Timing:**  
+- Allow 5–10 minutes at the beginning to confirm learners can access GitHub and open a repository.  
+- An additional 5 minutes may be needed if learners choose to install pixi.
+
+**Verification:**  
+Ask learners to visit a GitHub repository, click “Edit”, and confirm they can commit changes to a fork.  
+For those using local tools, verify that:
+
+git --version
+
+returns a valid value.
+
+**Common Issues:**  
+- Windows users may need to configure Git Bash as the terminal in VS Code.  
+- Some institutional devices may require sign-in through a browser for GitHub access.  
+- If pixi is installed but not found, VS Code may need to be restarted so PATH updates are recognized.
+
+**Troubleshooting Resources:**  
+- Git documentation: https://git-scm.com/docs  
+- VS Code terminal guide: https://code.visualstudio.com/docs/terminal/basics  
+- pixi installation guide: https://pixi.sh/latest/  
+- GitHub authentication help: https://docs.github.com/en/get-started
+
+::::::::::::::::::::::::::::::::::
