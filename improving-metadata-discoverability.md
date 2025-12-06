@@ -6,64 +6,146 @@ exercises: 5
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-* What metadata helps make your software easier to find and reuse?
-* How can you enhance discoverability across scholarly platforms?
+- What metadata makes research software easier to find and reuse?
+- How can we improve discoverability across GitHub, Zenodo, and scholarly indexes?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-* Identify key metadata that improves software visibility
-* Add discoverability features to your GitHub and Zenodo records
+- Identify key metadata elements that increase visibility and reuse.
+- Enhance discoverability using GitHub features and Zenodo metadata fields.
+- Connect metadata across CITATION.cff, GitHub, and your DOI record for consistency.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-Good metadata and documentation help others understand, find, and cite your software. Descriptive information like keywords, author ORCIDs, and links to related works make your project easier to find on GitHub, Zenodo, and in scholarly indexes.
+Clear metadata helps others understand, evaluate, and *find* your software.  
+It also reduces the cognitive effort for future users because essential information is organized and easy to locate.
 
-Providing this context also supports FAIR principles and increases the likelihood your software will be reused.
+In earlier episodes, you created:
+
+- a **CITATION.cff** file  
+- a **license**  
+- a **repository structure**  
+- a **Zenodo record with a DOI**
+
+This episode brings these together. You will describe your project in consistent ways across platforms so search engines, citation tools, and colleagues can discover it.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
-Encourage learners to think of their software like a paper: title, abstract, authors, keywords, related works. Show examples from GitHub and Zenodo repositories.
+Encourage learners to compare well-described repositories with sparse ones.  
+Highlight how even small metadata additions increase visibility in GitHub search, Zenodo indexing, and DataCite services.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+## What counts as useful metadata?
+
+Good metadata answers predictable questions with minimal effort from the reader:
+
+- **What is this software?** (short description or abstract)
+- **Who made it?** (authors, ORCIDs)
+- **How do I cite it?** (CITATION.cff + DOI)
+- **What domain is it for?** (keywords)
+- **What else does it relate to?**  
+  - related article DOI  
+  - datasets used  
+  - funding source  
+  - project website  
+
+You may add these in multiple places, but they should remain consistent.
+
+---
+
+## GitHub-specific discoverability features
+
+GitHub uses structured metadata to improve search ranking and cross-repository linking.
+
+**Add these items in `Settings → General → Topics`:**
+
+- discipline tags (e.g., `geospatial`, `text-mining`, `materials-science`)
+- methodological tags (`simulation`, `visualization`, `machine-learning`)
+- language tags (`python`, `r`)
+
+**Improve your README:**
+
+Your README is the first page many users see. Include:
+
+- purpose statement  
+- short example of usage  
+- link to your CITATION.cff  
+- link to your Zenodo DOI  
+- link to your documentation  
+
+This connects your metadata across platforms.
+
+---
+
+## Zenodo and DOI metadata
+
+Zenodo metadata flows into:
+
+- **DataCite**  
+- Google Scholar  
+- library catalogs  
+- domain repositories that harvest DOIs  
+
+Add or refine:
+
+- authors + ORCIDs  
+- keywords  
+- related works (DOIs, URLs)  
+- funding references  
+- version notes  
+- a readable software description  
+
+Your goal is *context*. This helps researchers decide quickly whether to reuse your work.
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: What Makes Metadata Useful?
+## Challenge 1: Identify Useful Metadata
 
-List three metadata elements you would add to improve a software repository’s discoverability.
+List three elements you would add to improve a repository’s discoverability.
 
 :::::::::::::::::::::::: solution
 
-Examples: keywords, author ORCID IDs, funding acknowledgments, related article DOI, software description.
+Examples:
+
+- ORCID IDs for each author  
+- Keywords describing the domain and function  
+- A link to a related article or dataset  
+- A project description in your README  
+- Funding acknowledgment  
 
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 2: Enhance Your Zenodo Record
+## Challenge 2: Improve Your Zenodo Record
 
-After generating a DOI via Zenodo, update the metadata fields in your record.
+After generating a DOI in the earlier episode, expand its metadata:
 
 :::::::::::::::::::::::: solution
 
-1. Go to your Zenodo record
-2. Click "Edit"
-3. Add keywords, ORCID IDs, description, publication references, and funding info
-4. Save the changes
+1. Open your Zenodo record.  
+2. Select “Edit.”  
+3. Add:  
+   - keywords  
+   - authors and ORCIDs  
+   - description  
+   - related publication DOIs  
+   - funding  
+4. Save and publish the updated record.  
 
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
-
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-* Metadata improves findability and reusability
-* Add author identifiers, keywords, and related works to GitHub and Zenodo
-* Well-described software is easier to discover and cite
+- Metadata increases discoverability in GitHub, Zenodo, and scholarly indexes.  
+- Use consistent information across CITATION.cff, README, GitHub topics, and Zenodo.  
+- Thoughtful metadata supports FAIR principles and helps others reuse your software.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::

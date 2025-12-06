@@ -6,43 +6,49 @@ exercises: 3
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-* How can I make my software reproducible across machines?
-* What is a simple way to manage Python and R environments for a project?
-* How does using `pixi` improve the citable quality of my research software?
+- Why do software projects need well defined environments?
+- How can `pixi` help learners run the same code the developer used?
+- How does environment management improve the reproducibility and citability of research software?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-* Explain why environment management is important for reproducible research.
-* Create a minimal `pixi.toml` to define project dependencies.
-* Use `pixi` to run code in a clean and isolated environment.
-* Understand how environment files support citation, reuse, and FAIR software principles.
+- Explain why environment definition is central to reproducible research.
+- Create a minimal `pixi.toml` file for a project.
+- Use `pixi` to run Python or R code inside a clean, isolated environment.
+- Describe how environment files support FAIR software and citation practices.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Why Environments Matter
 
-Software often fails to run outside the original researcher's machine because of
-differences in library versions, dependencies, or missing system requirements.
-Environment management captures the “state” in which your software runs.
+Research software often “works on my machine” and nowhere else.  
+Different operating systems, outdated packages, and mismatched library versions frequently break code.
 
-Defining an environment:
+Environment management reduces this friction because it captures:
 
-* helps others reproduce your results
-* reduces troubleshooting time
-* strengthens the reusability and citable quality of your software
-* supports FAIR4RS principles
+- the exact language versions used  
+- required packages  
+- the dependency set needed to run the software  
+- instructions for reproducing the execution environment  
 
-`pixi` provides an easy and fast way to manage environments for Python, R, and more.
+For researchers, this supports:
+
+- reproducibility  
+- clearer documentation  
+- better long term maintenance  
+- a stronger foundation for citation and reuse  
+
+`pixi` is a modern, fast environment manager that works for Python, R, and many other languages.
 
 ---
 
 ## Installing pixi
 
-Visit [https://pixi.sh](https://pixi.sh) for full installation instructions.
+Full installation docs: <https://pixi.sh>
 
-Common installation command for macOS/Linux:
+Common installation for macOS or Linux:
 
 ```bash
 curl -fsSL https://pixi.sh/install.sh | bash
@@ -52,14 +58,14 @@ Windows users can install via MSI installer or `winget`.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-`pixi` ships its own toolchain.
-Learners do not need Python, R, or compilers pre-installed on their system.
+`pixi` includes its own language runtimes.  
+Learners do not need preinstalled Python, R, compilers, or system packages.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Creating a pixi Project
+## Creating a New pixi Project
 
-Create a new directory and initialize a pixi project:
+Create a directory and initialize a pixi project:
 
 ```bash
 mkdir myproject
@@ -67,73 +73,86 @@ cd myproject
 pixi init
 ```
 
-This command creates a `pixi.toml` file, which defines your environment.
+This creates a `pixi.toml` file, which documents your environment.
 
-Add Python and a package:
+Add Python:
 
 ```bash
 pixi add python
+```
+
+Add the NumPy package:
+
+```bash
 pixi add numpy
 ```
 
-Add R and a package:
+Add R and one package:
 
 ```bash
 pixi add r
 pixi add r-dplyr
 ```
 
-Your `pixi.toml` now documents dependencies for anyone who wants to reproduce or build upon your software.
+Your `pixi.toml` is now a reproducible record of all dependencies needed for the software.
 
 ---
 
-## Running Code with pixi
+## Running Code With pixi
 
-Run Python code inside the environment:
+Run Python code:
 
 ```bash
 pixi run python script.py
 ```
 
-Run R code inside the environment:
+Run R code:
 
 ```bash
 pixi run Rscript analysis.R
 ```
 
-The environment is isolated, repeatable, and portable.
+Every command is executed *inside* the environment described by `pixi.toml`.
+
+This makes it easier for others to test, cite, extend, and build upon your work.
 
 ---
 
-## How pixi Supports Citation and Reuse
+## How Environments Support Citation and Reuse
 
-Environments are part of the scholarly record.
-A documented environment:
+A reusable research software project contains not only code, but:
 
-* ensures others can run the software described in a paper
-* reduces replication failures
-* provides metadata that complements a DOI and `CITATION.cff`
-* strengthens compliance with FAIR4RS principles
+- licensing  
+- authorship and citation metadata (`CITATION.cff`)  
+- version information  
+- a documented environment  
 
-When your software is deposited (e.g., Zenodo, Figshare), include:
+Including `pixi.toml` in your repository or DOI deposit helps future readers:
 
-* your `pixi.toml` file
-* instructions for running code via `pixi run`
+- recreate the execution environment  
+- verify results  
+- adapt your code for new analyses  
+- evaluate whether the software is FAIR (Findable, Accessible, Interoperable, Reusable)  
 
-This helps future users reproduce results more reliably.
+When publishing your software, include:
+
+- the `pixi.toml` file  
+- instructions such as:  
+  ```bash
+  pixi run python script.py
+  ```
 
 ---
 
 :::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge: Add a dependency
+### Challenge: Add a new dependency
 
-Add `pandas` or `r-ggplot2` to your environment using `pixi`.
-What changes do you observe in the `pixi.toml` file?
+Use `pixi` to add `pandas` or `r-ggplot2` to your project.
+
+What changed in your `pixi.toml` file?
 
 :::::::::::::::::::::::: solution
-
-Run:
 
 ```bash
 pixi add pandas
@@ -145,17 +164,16 @@ or:
 pixi add r-ggplot2
 ```
 
-The `[project.dependencies]` section of the `pixi.toml` file now includes the new package as an explicit dependency.
+You should see the new package listed under `[project.dependencies]` in your `pixi.toml`.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
-
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-* Environments are essential for reproducible, citable research software.
-* `pixi` provides fast, language-agnostic environment management for Python and R.
-* The `pixi.toml` file documents dependencies that support FAIR4RS principles.
-* Use `pixi run` to execute code inside a clean and reproducible environment.
+- Reproducible environments reduce troubleshooting and support more reusable software.
+- `pixi` provides fast, cross platform environment management.
+- The `pixi.toml` file acts as documentation that supports citation and FAIR4RS principles.
+- Use `pixi run` to execute Python or R code inside a reproducible environment.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
