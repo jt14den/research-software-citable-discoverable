@@ -1,5 +1,4 @@
 ---
-
 title: "Wrap-Up and Reflection"
 teaching: 5
 exercises: 5

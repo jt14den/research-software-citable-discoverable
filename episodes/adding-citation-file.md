@@ -1,5 +1,4 @@
 ---
-
 title: "Adding a CITATION File"
 teaching: 8
 exercises: 5

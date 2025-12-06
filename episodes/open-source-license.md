@@ -1,5 +1,4 @@
 ---
-
 title: "Applying an Open Source License"
 teaching: 8
 exercises: 5
