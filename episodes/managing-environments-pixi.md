@@ -149,6 +149,8 @@ pixi add r-ggplot2
 The `[project.dependencies]` section of the `pixi.toml` file now includes the new package as an explicit dependency.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
