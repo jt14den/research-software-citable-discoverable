@@ -1,5 +1,4 @@
 ---
-
 title: "Making Software Citable with a DOI"
 teaching: 10
 exercises: 5
@@ -45,7 +44,7 @@ Versioned DOIs let others cite the exact code version used in a study, ensuring 
 :::::::::::::::::::::::::::::::::
 
 
-::::::::::::::::::::::::::::::::: challege
+::::::::::::::::::::::::::::::::: challenge
 ## Challenge 2: Create a DOI with Zenodo
 
 Link your GitHub repository to Zenodo and archive your first release.
