@@ -1,5 +1,4 @@
 ---
-
 title: "Improving Metadata and Discoverability"
 teaching: 10
 exercises: 5

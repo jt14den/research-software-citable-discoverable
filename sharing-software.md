@@ -1,5 +1,4 @@
 ---
-
 title: "Sharing Software Publicly"
 teaching: 10
 exercises: 5
