@@ -1,5 +1,5 @@
 ---
-title: "Applying an Open Source License"
+title: "Choosing an Open-Source License"
 teaching: 8
 exercises: 5
 ---
@@ -13,55 +13,153 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-* Explain the legal importance of software licensing
-* Choose and apply an open-source license to a code repository
+* Explain why unlicensed software is legally restricted
+* Describe the main categories of open-source licenses
+* Choose an appropriate license for a small research project
+* Add a license file to a GitHub repository
+* Identify resources for further help with licensing decisions
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
 
-Without a license, your code is "all rights reserved" by default — meaning others cannot legally reuse, modify, or redistribute it. Adding a license signals to others how they can use your work and increases trust and adoption.
+## Why licensing matters
 
-Open-source licenses like MIT, Apache 2.0, or GPL let others build on your work while ensuring proper attribution.
+When researchers publish code without a license, most people assume it is “public.”
+Legally, it is not. Copyright law applies automatically. Without a license:
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+* others cannot reuse, modify, or redistribute the code
+* collaboration becomes uncertain and risky
+* the sustainability of the project suffers
 
-Briefly review the difference between permissive and copyleft licenses if there's time. Focus on showing how easy it is to add a license file via GitHub.
+Clear licensing communicates permission and expectations.
+This reduces friction and supports open, reproducible research.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::: callout
 
-::::::::::::::::::::::::::::::::::::: challenge
+### Inclusive perspective
 
-## Challenge 1: What Happens Without a License?
+Licenses can feel intimidating. We assume no prior legal expertise.
+Our focus is practical decision-making with widely used, well-supported licenses.
 
-Imagine someone wants to use your script in their project. What are the risks if there's no license file?
+::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::: solution
+## Understanding license categories
 
-Legally, they cannot reuse or redistribute it. This may discourage collaboration or citation. Adding a license removes this barrier.
+Open-source licenses fall into two broad groups.
+We introduce only what learners need at this beginner stage.
 
-:::::::::::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::
+### Permissive licenses
 
-::::::::::::::::::::::::::::::::: challenge
-## Challenge 2: Add a License to Your Repo
+Examples: MIT, BSD, Apache-2.0
 
-Use GitHub’s license selector to add a license to your project.
+These allow broad reuse.
+Anyone can copy, modify, or redistribute the code with minimal conditions.
+They are common in research because they:
 
-:::::::::::::::::::::::: solution
+* are simple to understand
+* maximize downstream flexibility
+* integrate well with most tooling
 
-1. On your repository page, click "Add file" → "Create new file"
-2. Name the file `LICENSE`
-3. GitHub provides a license template dropdown — choose MIT, Apache 2.0, or another
-4. Commit the file
+### Copyleft licenses
 
-:::::::::::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::
+Example: GPL-3.0
 
-::::::::::::::::::::::::::::::::::::: keypoints
+These require that derivative works also remain open.
+This protects openness across the lifecycle of a project.
 
-* Without a license, others cannot legally use your code
-* Open-source licenses promote reuse and increase citability
-* Adding a license takes just a few clicks on GitHub
+This is a value-driven choice.
+Some researchers prefer ensuring openness.
+Others prioritize flexibility and interoperability.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+### SPDX identifiers
+
+GitHub and most research software registries rely on short standardized identifiers
+like `MIT`, `Apache-2.0`, or `GPL-3.0-or-later`.
+We will use these throughout the lesson.
+
+
+## How to choose a license for your project
+
+Many research teams choose:
+
+* **MIT** when they want broad reuse and minimal conditions
+* **Apache-2.0** when they need explicit patent protection
+* **GPL-3.0** when they want to ensure derivatives remain open
+
+A simple decision rule for beginners:
+
+* If you want others to reuse your code with few restrictions → choose MIT
+* If you want openness to persist across reuse → choose GPL-3.0
+* If you collaborate with industry, or prioritize explicit patent terms → choose Apache-2.0
+
+:::::::::::::::::::::::::::::: callout
+
+### You are not alone
+
+Most institutions have librarians, research software engineers, or legal staff
+who can help with complex cases. You do not need to know everything.
+
+::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::: checklist 
+
+## Adding a license file to your repository
+
+### Step 1: Add a `LICENSE` file
+
+You can create the file manually or through GitHub’s web interface.
+
+**On GitHub:**
+
+* Navigate to your repository
+* Select **Add file → Create new file**
+* Name it `LICENSE`
+* Use **Choose a license template**
+* Select MIT, Apache-2.0, or GPL-3.0
+* Commit the file
+
+GitHub will automatically tag your project with the chosen SPDX identifier.
+
+### Step 2: Communicate your license in documentation
+
+Add a short note to your README:
+
+> This project is licensed under the MIT License. See `LICENSE` for details.
+
+This improves discoverability and reduces ambiguity for users.
+
+::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::: challenge
+
+## Exercise: Compare permissive and copyleft licenses
+
+Read these two short license descriptions provided in the lesson material.
+In small groups or pairs:
+
+* Identify what freedoms each license provides
+* Identify one scenario where each license might be preferred
+
+Share one observation with the group.
+
+::::::::::::::::::::::::::::::::
+
+## Summary
+
+Licensing is foundational to making research software usable, citable, and shareable.
+In this episode, you selected an appropriate open-source license and added it to a repository.
+In the next episode, we will connect licensing with making software *citable* and *discoverable*,
+continuing to build the scaffolding that supports open, sustainable research software.
+
+::::::::::::::: keypoints
+
+## Key Points
+
+* Without a license, software is legally restricted and not reusable
+* Open-source licenses communicate clear permissions and expectations
+* Permissive licenses maximize flexibility
+* Copyleft licenses preserve openness
+* GitHub supports adding standardized license files through templates
+
+:::::::::::::::
+

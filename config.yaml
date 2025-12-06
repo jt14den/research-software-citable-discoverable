@@ -67,10 +67,10 @@ contact: 'team@carpentries.org' # FIXME
 # Order of episodes in your lesson
 episodes:
 - sharing-software.md
-- managing-environments-pixi.md
 - open-source-license.md
-- making-software-citable.md
+- managing-environments-pixi.md
 - adding-citation-file.md
+- making-software-citable.md
 - improving-metadata-discoverability.md
 - why-software-citation.md
 - wrap-up-reflect.md
