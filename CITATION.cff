@@ -1,22 +1,63 @@
-# This template CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to replace its contents
-# with information about your lesson.
-# Remember to update this file periodically, 
-# ensuring that the author list and other fields remain accurate.
-
 cff-version: 1.2.0
-title: FIXME
+title: "Making Research Software Citable and Discoverable"
 message: >-
-  Please cite this lesson using the information in this file
-  when you refer to it in publications, and/or if you
-  re-use, adapt, or expand on the content in your own
-  training material.
-type: dataset
+  Please cite this lesson if you use or adapt it in your research,
+  teaching, or training materials.
+type: lesson
 authors:
-  - given-names: FIXME
-    family-names: FIXME
-abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  - family-names: Dennis
+    given-names: Tim
+    orcid: "https://orcid.org/0000-0001-6632-3812"
+    affiliation: UCLA Library, Data Science Center
+identifiers:
+  - type: url
+    value: "https://github.com/jt14den/research-software-citable-discoverable"
+keywords:
+  - research software
+  - FAIR4RS
+  - citation
+  - discoverability
+  - documentation
+  - open science
+  - Carpentries Incubator
 license: CC-BY-4.0
+version: 0.1.0
+date-released: "2025-02-01"
+
+references:
+  - type: lesson
+    title: "Building Better Research Software"
+    authors:
+      - given-names: Sarah
+        family-names: Gibson
+        orcid: "https://orcid.org/0000-0003-0356-2765"
+      - given-names: Aman
+        family-names: Goel
+        orcid: "https://orcid.org/0000-0003-3567-2096"
+      - given-names: Toby
+        family-names: Hodges
+        orcid: "https://orcid.org/0000-0003-1766-456X"
+      - given-names: Sarah
+        family-names: Jaffa
+      - given-names: Kamilla
+        family-names: Kopec-Harding
+      - given-names: Aleksandra
+        family-names: Nenadic
+        affiliation: Software Sustainability Institute / University of Manchester
+        orcid: "https://orcid.org/0000-0002-2269-3894"
+      - given-names: Colin
+        family-names: Sauze
+      - given-names: Sarah
+        family-names: Stevens
+        affiliation: University of Wisconsin-Madison
+        orcid: "https://orcid.org/0000-0002-7040-548X"
+    identifiers:
+      - type: doi
+        value: "10.5281/zenodo.12666088"
+    repository-code: >-
+      https://github.com/carpentries-incubator/better-research-software
+    url: >-
+      https://carpentries-incubator.github.io/better-research-software/
+    abstract: >-
+      A course on tools and practices for developing and collaborating on open,
+      sustainable, and FAIR research software.
