@@ -256,7 +256,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="open-source-license.html">2. </a>
+        <a href="managing-environments-pixi.html">2. Managing Reproducible Environments with pixi</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -268,7 +268,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="making-software-citable.html">3. </a>
+        <a href="open-source-license.html">3. </a>
     </div>
 <!--/div.accordion-header-->
 
@@ -280,7 +280,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="adding-citation-file.html">4. </a>
+        <a href="making-software-citable.html">4. Making Software Citable with a DOI</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -292,7 +292,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="improving-metadata-discoverability.html">5. </a>
+        <a href="adding-citation-file.html">5. </a>
     </div>
 <!--/div.accordion-header-->
 
@@ -304,7 +304,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="why-software-citation.html">6. Why Make Software Citable?</a>
+        <a href="improving-metadata-discoverability.html">6. </a>
     </div>
 <!--/div.accordion-header-->
 
@@ -316,7 +316,19 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="wrap-up-reflect.html">7. </a>
+        <a href="why-software-citation.html">7. Why Make Software Citable?</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="wrap-up-reflect.html">8. </a>
     </div>
 <!--/div.accordion-header-->
 
@@ -506,6 +518,224 @@ file.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</section></section><section id="aio-managing-environments-pixi"><p>Content from <a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></p>
+<hr>
+<p>Last updated on 2025-12-06 |
+
+        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/episodes/managing-environments-pixi.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can I make my software reproducible across machines?</li>
+<li>What is a simple way to manage Python and R environments for a
+project?</li>
+<li>How does using <code>pixi</code> improve the citable quality of my
+research software?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain why environment management is important for reproducible
+research.</li>
+<li>Create a minimal <code>pixi.toml</code> to define project
+dependencies.</li>
+<li>Use <code>pixi</code> to run code in a clean and isolated
+environment.</li>
+<li>Understand how environment files support citation, reuse, and FAIR
+software principles.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="why-environments-matter">Why Environments Matter<a class="anchor" aria-label="anchor" href="#why-environments-matter"></a>
+</h2>
+<hr class="half-width">
+<p>Software often fails to run outside the original researcher’s machine
+because of differences in library versions, dependencies, or missing
+system requirements. Environment management captures the “state” in
+which your software runs.</p>
+<p>Defining an environment:</p>
+<ul>
+<li>helps others reproduce your results</li>
+<li>reduces troubleshooting time</li>
+<li>strengthens the reusability and citable quality of your
+software</li>
+<li>supports FAIR4RS principles</li>
+</ul>
+<p><code>pixi</code> provides an easy and fast way to manage
+environments for Python, R, and more.</p>
+<hr></section><section><h2 class="section-heading" id="installing-pixi">Installing pixi<a class="anchor" aria-label="anchor" href="#installing-pixi"></a>
+</h2>
+<hr class="half-width">
+<p>Visit <a href="https://pixi.sh" class="external-link">https://pixi.sh</a> for full
+installation instructions.</p>
+<p>Common installation command for macOS/Linux:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://pixi.sh/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre>
+</div>
+<p>Windows users can install via MSI installer or
+<code>winget</code>.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p><code>pixi</code> ships its own toolchain. Learners do not need
+Python, R, or compilers pre-installed on their system.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="creating-a-pixi-project">Creating a pixi Project<a class="anchor" aria-label="anchor" href="#creating-a-pixi-project"></a>
+</h2>
+<hr class="half-width">
+<p>Create a new directory and initialize a pixi project:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">mkdir</span> myproject</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="bu">cd</span> myproject</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="ex">pixi</span> init</span></code></pre>
+</div>
+<p>This command creates a <code>pixi.toml</code> file, which defines
+your environment.</p>
+<p>Add Python and a package:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">pixi</span> add python</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">pixi</span> add numpy</span></code></pre>
+</div>
+<p>Add R and a package:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">pixi</span> add r</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="ex">pixi</span> add r-dplyr</span></code></pre>
+</div>
+<p>Your <code>pixi.toml</code> now documents dependencies for anyone who
+wants to reproduce or build upon your software.</p>
+<hr></section><section><h2 class="section-heading" id="running-code-with-pixi">Running Code with pixi<a class="anchor" aria-label="anchor" href="#running-code-with-pixi"></a>
+</h2>
+<hr class="half-width">
+<p>Run Python code inside the environment:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">pixi</span> run python script.py</span></code></pre>
+</div>
+<p>Run R code inside the environment:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">pixi</span> run Rscript analysis.R</span></code></pre>
+</div>
+<p>The environment is isolated, repeatable, and portable.</p>
+<hr></section><section><h2 class="section-heading" id="how-pixi-supports-citation-and-reuse">How pixi Supports Citation and Reuse<a class="anchor" aria-label="anchor" href="#how-pixi-supports-citation-and-reuse"></a>
+</h2>
+<hr class="half-width">
+<p>Environments are part of the scholarly record. A documented
+environment:</p>
+<ul>
+<li>ensures others can run the software described in a paper</li>
+<li>reduces replication failures</li>
+<li>provides metadata that complements a DOI and
+<code>CITATION.cff</code>
+</li>
+<li>strengthens compliance with FAIR4RS principles</li>
+</ul>
+<p>When your software is deposited (e.g., Zenodo, Figshare),
+include:</p>
+<ul>
+<li>your <code>pixi.toml</code> file</li>
+<li>instructions for running code via <code>pixi run</code>
+</li>
+</ul>
+<p>This helps future users reproduce results more reliably.</p>
+<hr>
+<div id="challenge-add-a-dependency" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-add-a-dependency" class="callout-inner">
+<h3 class="callout-title">Challenge: Add a dependency</h3>
+<div class="callout-content">
+<p>Add <code>pandas</code> or <code>r-ggplot2</code> to your environment
+using <code>pixi</code>. What changes do you observe in the
+<code>pixi.toml</code> file?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>Run:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">pixi</span> add pandas</span></code></pre>
+</div>
+<p>or:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">pixi</span> add r-ggplot2</span></code></pre>
+</div>
+<p>The <code>[project.dependencies]</code> section of the
+<code>pixi.toml</code> file now includes the new package as an explicit
+dependency.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Environments are essential for reproducible, citable research
+software.</li>
+<li>
+<code>pixi</code> provides fast, language-agnostic environment
+management for Python and R.</li>
+<li>The <code>pixi.toml</code> file documents dependencies that support
+FAIR4RS principles.</li>
+<li>Use <code>pixi run</code> to execute code inside a clean and
+reproducible environment.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
 </section></section><section id="aio-open-source-license"><p>Content from <a href="open-source-license.html"></a></p>
 <hr>
 <p>Last updated on 2025-12-04 |
@@ -631,17 +861,14 @@ collaboration or citation. Adding a license removes this barrier.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-making-software-citable"><p>Content from <a href="making-software-citable.html"></a></p>
+</section></section><section id="aio-making-software-citable"><p>Content from <a href="making-software-citable.html">Making Software Citable with a DOI</a></p>
 <hr>
-<p>Last updated on 2025-12-04 |
+<p>Last updated on 2025-12-06 |
 
         <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/episodes/making-software-citable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
-<hr>
-<p>title: “Making Software Citable with a DOI” teaching: 10 exercises: 5
-—</p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -706,11 +933,19 @@ bugs.</p>
 </div>
 </div>
 </div>
-</section><div class="section level2 challege">
-<h2 id="challenge-2-create-a-doi-with-zenodo">Challenge 2: Create a DOI with Zenodo<a class="anchor" aria-label="anchor" href="#challenge-2-create-a-doi-with-zenodo"></a>
-</h2>
+<div id="challenge-2-create-a-doi-with-zenodo" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-create-a-doi-with-zenodo" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Create a DOI with Zenodo</h3>
+<div class="callout-content">
 <p>Link your GitHub repository to Zenodo and archive your first
 release.</p>
+</div>
+</div>
+</div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
@@ -729,7 +964,6 @@ GitHub</li>
 </div>
 </div>
 </div>
-</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -744,7 +978,12 @@ GitHub</li>
 </ul>
 </div>
 </div>
-</div></section><section id="aio-adding-citation-file"><p>Content from <a href="adding-citation-file.html"></a></p>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-adding-citation-file"><p>Content from <a href="adding-citation-file.html"></a></p>
 <hr>
 <p>Last updated on 2025-12-04 |
 
@@ -950,7 +1189,7 @@ repository’s discoverability.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples: keywords, author ORCID IDs, funding acknowledgments,
 related article DOI, software description.</p>
@@ -976,7 +1215,7 @@ record.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Go to your Zenodo record</li>
@@ -1074,7 +1313,7 @@ What’s missing?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The script should be citable so that others can properly credit its
 use. Without citation metadata or a DOI, the software may go
@@ -1280,9 +1519,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://jt14den.github.io/research-software-citable-discoverable/aio.html",
   "identifier": "https://jt14den.github.io/research-software-citable-discoverable/aio.html",
-  "dateCreated": "2025-12-04",
-  "dateModified": "2025-12-04",
-  "datePublished": "2025-12-04"
+  "dateCreated": "2025-12-06",
+  "dateModified": "2025-12-06",
+  "datePublished": "2025-12-06"
 }
 
   </script><script>
