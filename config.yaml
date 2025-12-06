@@ -18,13 +18,13 @@ carpentry: 'incubator'
 carpentry_description: 'Lesson Description'
 
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'Sharing Research Software: Reproducible, Citable, and Discoverable' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: 2025-12-06
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries' # FIXME
+keywords: 'research software, software citation, reproducibility, Git, GitHub, pixi, packaging, metadata, discoverability, open source, FAIR, citable software, research workflows'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
