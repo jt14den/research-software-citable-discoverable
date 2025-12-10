@@ -18,7 +18,7 @@ carpentry: 'incubator'
 carpentry_description: 'Lesson Description'
 
 # Overall title for pages.
-title: 'Sharing Research Software: Reproducible, Citable, and Discoverable' # FIXME
+title: 'Sharing Research Software: Reproducible, Citable, and Discoverable'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: 2025-12-06
@@ -28,19 +28,19 @@ keywords: 'research software, software citation, reproducibility, Git, GitHub, p
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+life_cycle: 'pre-alpha'
 
 # License of the lesson
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/jt14den/research-software-citable-discoverable' # FIXME
+source: 'https://github.com/jt14den/research-software-citable-discoverable'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org' # FIXME
+contact: 'tdennis@library.ucla.edu'
 
 # Navigation ------------------------------------------------
 #
