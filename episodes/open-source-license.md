@@ -85,31 +85,51 @@ The UC system does **not recommend GPL 3.0** for university-owned software due t
 
 ## How to choose a license for your UC project
 
-The UC Open Source Software Workgroup identified five "low-risk" licenses suitable for most projects:
+The UC Open Source Software Workgroup identified five "low-risk" licenses suitable for most projects. Here's a decision guide:
 
-**For most research software:**
-* **BSD 3-Clause** → UC's primary recommendation (simple, protective, widely compatible)
-* **MIT** → Very similar to BSD, slightly simpler (no non-endorsement clause)
+``` mermaid
+graph TD
+    Start[Starting a new UC research software project?] --> Check{Do you have<br/>special requirements?}
+    
+    Check -->|No special needs| BSD[Use BSD 3-Clause<br/>✓ UC's primary recommendation<br/>✓ Simple and protective<br/>✓ Widely compatible]
+    
+    Check -->|Need simpler text| MIT[Use MIT License<br/>✓ Nearly identical to BSD<br/>✓ Shorter, easier to read<br/>✓ Very popular]
+    
+    Check -->|Industry partnership<br/>or patent concerns| Apache[Use Apache 2.0<br/>✓ Explicit patent protection<br/>✓ Detailed contribution terms<br/>✓ Industry-friendly]
+    
+    Check -->|Educational focus| ECL[Consider ECL 2.0<br/>✓ Education-specific variant<br/>✓ Based on Apache 2.0]
+    
+    BSD --> TTO[Verify with campus<br/>Tech Transfer Office]
+    MIT --> TTO
+    Apache --> TTO
+    ECL --> TTO
+    
+    Check -->|Need copyleft| Copyleft{GPL version?}
+    Copyleft -->|GPL 2.0| GPL2[May be acceptable<br/>Consult Tech Transfer]
+    Copyleft -->|GPL 3.0| GPL3[❌ Not recommended by UC<br/>Patent conflicts]
+    
+    GPL2 --> TTO
+    GPL3 --> TTO
+    
+    style BSD fill:#90EE90
+    style MIT fill:#90EE90
+    style Apache fill:#90EE90
+    style ECL fill:#90EE90
+    style GPL2 fill:#FFFF99
+    style GPL3 fill:#FFB6C6
+    style TTO fill:#87CEEB
+```
 
-**For specific needs:**
-* **Apache 2.0** → Explicit patent protection (good for industry collaborations)
-* **BSD 2-Clause** → Simplified BSD (removes non-endorsement clause)
-* **ECL 2.0** → Educational focus (variant of Apache 2.0)
+### Quick reference
 
-### Simple decision guide
+| Your need | Recommended license | Why |
+|-----------|-------------------|-----|
+| Default / most projects | BSD 3-Clause | UC's standard recommendation |
+| Simplest possible | MIT | Minimal text, very popular |
+| Industry collaboration | Apache 2.0 | Explicit patent terms |
+| Educational focus | ECL 2.0 | Education-specific variant |
 
-1. **Default choice:** Start with **BSD 3-Clause**
-   - Recommended by UC
-   - Protects your institution
-   - Simple and widely used
-
-2. **Alternative:** Use **MIT** if you want the simplest possible license
-   - Nearly identical to BSD
-   - Slightly shorter text
-
-3. **Special case:** Use **Apache 2.0** if working with industry partners
-   - Explicit patent protection
-   - Preferred by some companies
+**Always consult your campus Tech Transfer office before releasing UC-owned software.**
 
 :::::::::::::::::::::::::::::: callout
 
