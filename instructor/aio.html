@@ -737,46 +737,76 @@ Tech Transfer office about GPL 2.0 or alternatives.</p>
 </h2>
 <hr class="half-width">
 <p>The UC Open Source Software Workgroup identified five “low-risk”
-licenses suitable for most projects:</p>
-<p><strong>For most research software:</strong> * <strong>BSD
-3-Clause</strong> → UC’s primary recommendation (simple, protective,
-widely compatible) * <strong>MIT</strong> → Very similar to BSD,
-slightly simpler (no non-endorsement clause)</p>
-<p><strong>For specific needs:</strong> * <strong>Apache 2.0</strong> →
-Explicit patent protection (good for industry collaborations) *
-<strong>BSD 2-Clause</strong> → Simplified BSD (removes non-endorsement
-clause) * <strong>ECL 2.0</strong> → Educational focus (variant of
-Apache 2.0)</p>
+licenses suitable for most projects. Here’s a decision guide:</p>
+<pre class="mermaid"><code>graph TD
+    Start[Starting a new UC research software project?] --&gt; Check{Do you have&lt;br/&gt;special requirements?}
+
+    Check --&gt;|No special needs| BSD[Use BSD 3-Clause&lt;br/&gt;✓ UC's primary recommendation&lt;br/&gt;✓ Simple and protective&lt;br/&gt;✓ Widely compatible]
+
+    Check --&gt;|Need simpler text| MIT[Use MIT License&lt;br/&gt;✓ Nearly identical to BSD&lt;br/&gt;✓ Shorter, easier to read&lt;br/&gt;✓ Very popular]
+
+    Check --&gt;|Industry partnership&lt;br/&gt;or patent concerns| Apache[Use Apache 2.0&lt;br/&gt;✓ Explicit patent protection&lt;br/&gt;✓ Detailed contribution terms&lt;br/&gt;✓ Industry-friendly]
+
+    Check --&gt;|Educational focus| ECL[Consider ECL 2.0&lt;br/&gt;✓ Education-specific variant&lt;br/&gt;✓ Based on Apache 2.0]
+
+    BSD --&gt; TTO[Verify with campus&lt;br/&gt;Tech Transfer Office]
+    MIT --&gt; TTO
+    Apache --&gt; TTO
+    ECL --&gt; TTO
+
+    Check --&gt;|Need copyleft| Copyleft{GPL version?}
+    Copyleft --&gt;|GPL 2.0| GPL2[May be acceptable&lt;br/&gt;Consult Tech Transfer]
+    Copyleft --&gt;|GPL 3.0| GPL3[❌ Not recommended by UC&lt;br/&gt;Patent conflicts]
+
+    GPL2 --&gt; TTO
+    GPL3 --&gt; TTO
+
+    style BSD fill:#90EE90
+    style MIT fill:#90EE90
+    style Apache fill:#90EE90
+    style ECL fill:#90EE90
+    style GPL2 fill:#FFFF99
+    style GPL3 fill:#FFB6C6
+    style TTO fill:#87CEEB</code></pre>
 <div class="section level3">
-<h3 id="simple-decision-guide">Simple decision guide<a class="anchor" aria-label="anchor" href="#simple-decision-guide"></a>
+<h3 id="quick-reference">Quick reference<a class="anchor" aria-label="anchor" href="#quick-reference"></a>
 </h3>
-<ol style="list-style-type: decimal">
-<li>
-<strong>Default choice:</strong> Start with <strong>BSD
-3-Clause</strong>
-<ul>
-<li>Recommended by UC</li>
-<li>Protects your institution</li>
-<li>Simple and widely used</li>
-</ul>
-</li>
-<li>
-<strong>Alternative:</strong> Use <strong>MIT</strong> if you want
-the simplest possible license
-<ul>
-<li>Nearly identical to BSD</li>
-<li>Slightly shorter text</li>
-</ul>
-</li>
-<li>
-<strong>Special case:</strong> Use <strong>Apache 2.0</strong> if
-working with industry partners
-<ul>
-<li>Explicit patent protection</li>
-<li>Preferred by some companies</li>
-</ul>
-</li>
-</ol>
+<table class="table">
+<colgroup>
+<col width="31%">
+<col width="54%">
+<col width="14%">
+</colgroup>
+<thead><tr class="header">
+<th>Your need</th>
+<th>Recommended license</th>
+<th>Why</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Default / most projects</td>
+<td>BSD 3-Clause</td>
+<td>UC’s standard recommendation</td>
+</tr>
+<tr class="even">
+<td>Simplest possible</td>
+<td>MIT</td>
+<td>Minimal text, very popular</td>
+</tr>
+<tr class="odd">
+<td>Industry collaboration</td>
+<td>Apache 2.0</td>
+<td>Explicit patent terms</td>
+</tr>
+<tr class="even">
+<td>Educational focus</td>
+<td>ECL 2.0</td>
+<td>Education-specific variant</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Always consult your campus Tech Transfer office before
+releasing UC-owned software.</strong></p>
 <div id="uc-resources" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -832,7 +862,7 @@ California” (if UC-owned)</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You should see “BSD-3-Clause license” in the repository sidebar.
 GitHub automatically detects and displays your license.</p>
@@ -855,12 +885,12 @@ All rights reserved.</code></pre>
 <p>After adding a LICENSE file, reference it in your README so users
 immediately understand usage terms.</p>
 <p>Add this section near the top of your README:</p>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">## License</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>This project is licensed under the BSD 3-Clause License - see the <span class="co">[</span><span class="ot">LICENSE</span><span class="co">](LICENSE)</span> file for details.</span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">## License</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>This project is licensed under the BSD 3-Clause License - see the <span class="co">[</span><span class="ot">LICENSE</span><span class="co">](LICENSE)</span> file for details.</span></code></pre>
 </div>
 <p><strong>Why this matters:</strong> Users reading your README on
 platforms other than GitHub (Zenodo, email, exported PDFs) will see your
@@ -888,7 +918,7 @@ with collaborators.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
@@ -1140,7 +1170,7 @@ Interoperable, Reusable)</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1727,7 +1757,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-improving-metadata-discoverability"><p>Content from <a href="improving-metadata-discoverability.html">Improving Metadata and Discoverability</a></p>
 <hr>
-<p>Last updated on 2025-12-06 |
+<p>Last updated on 2025-12-26 |
 
         <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/episodes/improving-metadata-discoverability.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -1792,7 +1822,7 @@ colleagues can discover it.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Encourage learners to compare well-described repositories with sparse
 ones.<br>
@@ -1832,7 +1862,7 @@ abstract)</li>
 </ul>
 <p>You may add these in multiple places, but they should remain
 consistent.</p>
-<hr></section><section><h2 class="section-heading" id="github-specific-discoverability-features">GitHub-specific discoverability features<a class="anchor" aria-label="anchor" href="#github-specific-discoverability-features"></a>
+</section><section><h2 class="section-heading" id="github-specific-discoverability-features">GitHub-specific discoverability features<a class="anchor" aria-label="anchor" href="#github-specific-discoverability-features"></a>
 </h2>
 <hr class="half-width">
 <p>GitHub uses structured metadata to improve search ranking and
@@ -1908,7 +1938,7 @@ discoverability.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
@@ -1944,7 +1974,7 @@ metadata:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open your Zenodo record.<br>
@@ -2156,7 +2186,7 @@ action you’ll take with your own project.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Give learners a few minutes of quiet reflection, then facilitate a
 group discussion. Invite volunteers to share a step they plan to take
@@ -2183,7 +2213,7 @@ current or future project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Answers may vary: making a repo public, adding a license, archiving
 on Zenodo, writing a README, creating a CITATION file, etc.</p>
@@ -2209,7 +2239,7 @@ software more FAIR.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
