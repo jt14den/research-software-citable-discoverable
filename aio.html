@@ -486,7 +486,7 @@ work first?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Useful elements commonly include:</p>
 <ul>
@@ -553,7 +553,7 @@ them? - Could you legally reuse or modify it?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Learners may observe:</p>
 <ul>
@@ -598,7 +598,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-open-source-license"><p>Content from <a href="open-source-license.html">Choosing an Open-Source License</a></p>
 <hr>
-<p>Last updated on 2025-12-06 |
+<p>Last updated on 2025-12-26 |
 
         <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/episodes/open-source-license.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -614,6 +614,7 @@ any links that you are not going to use.
 <ul>
 <li>Why do you need a license for your code?</li>
 <li>How can an open-source license increase reuse and citation?</li>
+<li>What licenses does the UC system recommend?</li>
 </ul>
 </div>
 </div>
@@ -625,9 +626,9 @@ any links that you are not going to use.
 <ul>
 <li>Explain why unlicensed software is legally restricted</li>
 <li>Describe the main categories of open-source licenses</li>
-<li>Choose an appropriate license for a small research project</li>
+<li>Choose an appropriate license for a UC research project</li>
 <li>Add a license file to a GitHub repository</li>
-<li>Identify resources for further help with licensing decisions</li>
+<li>Identify UC resources for licensing decisions</li>
 </ul>
 </div>
 </div>
@@ -647,152 +648,237 @@ Without a license:</p>
 </ul>
 <p>Clear licensing communicates permission and expectations. This
 reduces friction and supports open, reproducible research.</p>
-<div id="inclusive-perspective" class="callout">
+<div id="uc-context-working-with-tech-transfer" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="inclusive-perspective" class="callout-inner">
-<h3 class="callout-title">Inclusive perspective</h3>
+<div id="uc-context-working-with-tech-transfer" class="callout-inner">
+<h3 class="callout-title">UC Context: Working with Tech Transfer</h3>
 <div class="callout-content">
-<p>Licenses can feel intimidating. We assume no prior legal expertise.
-Our focus is practical decision-making with widely used, well-supported
-licenses.</p>
+<p>At UC, software created using university resources is typically owned
+by The Regents of the University of California. Before releasing code
+under an open-source license, check with your campus Tech Transfer
+office to:</p>
+<ul>
+<li>Verify ownership</li>
+<li>Ensure no third-party restrictions apply</li>
+<li>Select the appropriate license for your project</li>
+</ul>
+<p>Each UC campus has specific processes - this lesson focuses on
+general best practices.</p>
 </div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="understanding-license-categories">Understanding license categories<a class="anchor" aria-label="anchor" href="#understanding-license-categories"></a>
 </h2>
 <hr class="half-width">
-<p>Open-source licenses fall into two broad groups. We introduce only
-what learners need at this beginner stage.</p>
+<p>Open-source licenses fall into two broad groups.</p>
 <div class="section level3">
 <h3 id="permissive-licenses">Permissive licenses<a class="anchor" aria-label="anchor" href="#permissive-licenses"></a>
 </h3>
-<p>Examples: MIT, BSD, Apache-2.0</p>
-<p>These allow broad reuse. Anyone can copy, modify, or redistribute the
-code with minimal conditions. They are common in research because
-they:</p>
+<p><strong>Examples: BSD, MIT, Apache 2.0</strong></p>
+<p>These allow broad reuse with minimal restrictions. Anyone can copy,
+modify, or redistribute the code. They are common in research because
+they’re simple and maximize flexibility.</p>
+<p><strong>The UC system recommends BSD licenses</strong> as the first
+choice for most projects because they:</p>
 <ul>
+<li>originated at UC Berkeley</li>
 <li>are simple to understand</li>
-<li>maximize downstream flexibility</li>
-<li>integrate well with most tooling</li>
+<li>protect both the institution and authors</li>
+<li>integrate well with most other licenses</li>
+<li>have minimal restrictions</li>
 </ul>
 </div>
 <div class="section level3">
 <h3 id="copyleft-licenses">Copyleft licenses<a class="anchor" aria-label="anchor" href="#copyleft-licenses"></a>
 </h3>
-<p>Example: GPL-3.0</p>
-<p>These require that derivative works also remain open. This protects
-openness across the lifecycle of a project.</p>
-<p>This is a value-driven choice. Some researchers prefer ensuring
-openness. Others prioritize flexibility and interoperability.</p>
-</div>
-<div class="section level3">
-<h3 id="spdx-identifiers">SPDX identifiers<a class="anchor" aria-label="anchor" href="#spdx-identifiers"></a>
-</h3>
-<p>GitHub and most research software registries rely on short
-standardized identifiers like <code>MIT</code>, <code>Apache-2.0</code>,
-or <code>GPL-3.0-or-later</code>. We will use these throughout the
-lesson.</p>
-</div>
-</section><section><h2 class="section-heading" id="how-to-choose-a-license-for-your-project">How to choose a license for your project<a class="anchor" aria-label="anchor" href="#how-to-choose-a-license-for-your-project"></a>
-</h2>
-<hr class="half-width">
-<p>Many research teams choose:</p>
-<ul>
-<li>
-<strong>MIT</strong> when they want broad reuse and minimal
-conditions</li>
-<li>
-<strong>Apache-2.0</strong> when they need explicit patent
-protection</li>
-<li>
-<strong>GPL-3.0</strong> when they want to ensure derivatives remain
-open</li>
-</ul>
-<p>A simple decision rule for beginners:</p>
-<ul>
-<li>If you want others to reuse your code with few restrictions → choose
-MIT</li>
-<li>If you want openness to persist across reuse → choose GPL-3.0</li>
-<li>If you collaborate with industry, or prioritize explicit patent
-terms → choose Apache-2.0</li>
-</ul>
-<div id="you-are-not-alone" class="callout">
+<p><strong>Example: GPL 2.0</strong></p>
+<p>These require that derivative works also remain open-source. This
+protects openness across the lifecycle of a project.</p>
+<div id="note-on-gpl-3.0" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="you-are-not-alone" class="callout-inner">
-<h3 class="callout-title">You are not alone</h3>
+<div id="note-on-gpl-3.0" class="callout-inner">
+<h3 class="callout-title">Note on GPL 3.0</h3>
 <div class="callout-content">
-<p>Most institutions have librarians, research software engineers, or
-legal staff who can help with complex cases. You do not need to know
-everything.</p>
+<p>The UC system does <strong>not recommend GPL 3.0</strong> for
+university-owned software due to patent provisions that may conflict
+with UC policies. If you need copyleft protection, consult your campus
+Tech Transfer office about GPL 2.0 or alternatives.</p>
 </div>
 </div>
 </div>
-<div id="checklist1" class="callout checklist">
-<div class="callout-square">
-<i class="callout-icon" data-feather="check-square"></i>
 </div>
-<span class="callout-header">Checklist</span>
-<div class="callout-inner">
-<div class="section level3 callout-title">
-<h3 class="callout-title" id="adding-a-license-file-to-your-repository">Adding a license file to your repository<a class="anchor" aria-label="anchor" href="#adding-a-license-file-to-your-repository"></a>
-</h3>
-</div>
-<div class="callout-content">
+</section><section><h2 class="section-heading" id="how-to-choose-a-license-for-your-uc-project">How to choose a license for your UC project<a class="anchor" aria-label="anchor" href="#how-to-choose-a-license-for-your-uc-project"></a>
+</h2>
+<hr class="half-width">
+<p>The UC Open Source Software Workgroup identified five “low-risk”
+licenses suitable for most projects:</p>
+<p><strong>For most research software:</strong> * <strong>BSD
+3-Clause</strong> → UC’s primary recommendation (simple, protective,
+widely compatible) * <strong>MIT</strong> → Very similar to BSD,
+slightly simpler (no non-endorsement clause)</p>
+<p><strong>For specific needs:</strong> * <strong>Apache 2.0</strong> →
+Explicit patent protection (good for industry collaborations) *
+<strong>BSD 2-Clause</strong> → Simplified BSD (removes non-endorsement
+clause) * <strong>ECL 2.0</strong> → Educational focus (variant of
+Apache 2.0)</p>
 <div class="section level3">
-<h3 id="step-1-add-a-license-file">Step 1: Add a <code>LICENSE</code> file<a class="anchor" aria-label="anchor" href="#step-1-add-a-license-file"></a>
+<h3 id="simple-decision-guide">Simple decision guide<a class="anchor" aria-label="anchor" href="#simple-decision-guide"></a>
 </h3>
-<p>You can create the file manually or through GitHub’s web
-interface.</p>
-<p><strong>On GitHub:</strong></p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Default choice:</strong> Start with <strong>BSD
+3-Clause</strong>
 <ul>
-<li>Navigate to your repository</li>
-<li>Select <strong>Add file → Create new file</strong>
+<li>Recommended by UC</li>
+<li>Protects your institution</li>
+<li>Simple and widely used</li>
+</ul>
 </li>
+<li>
+<strong>Alternative:</strong> Use <strong>MIT</strong> if you want
+the simplest possible license
+<ul>
+<li>Nearly identical to BSD</li>
+<li>Slightly shorter text</li>
+</ul>
+</li>
+<li>
+<strong>Special case:</strong> Use <strong>Apache 2.0</strong> if
+working with industry partners
+<ul>
+<li>Explicit patent protection</li>
+<li>Preferred by some companies</li>
+</ul>
+</li>
+</ol>
+<div id="uc-resources" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="uc-resources" class="callout-inner">
+<h3 class="callout-title">UC Resources</h3>
+<div class="callout-content">
+<ul>
+<li>
+<a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC
+OSS Chart and Companion Guide</a> - Detailed license comparison</li>
+<li>
+<a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link">UC
+OSPO License Guide</a> - Templates and guidance</li>
+<li>Contact your campus Tech Transfer office for project-specific
+advice</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="challenge-add-a-bsd-license-to-your-repository" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-add-a-bsd-license-to-your-repository" class="callout-inner">
+<h3 class="callout-title">Challenge: Add a BSD License to Your
+Repository</h3>
+<div class="callout-content">
+<p>Let’s add the UC-recommended BSD 3-Clause license to your demo
+repository:</p>
+<ol style="list-style-type: decimal">
+<li>Navigate to your repository on GitHub</li>
+<li>Click “Add file” → “Create new file”</li>
 <li>Name it <code>LICENSE</code>
 </li>
-<li>Use <strong>Choose a license template</strong>
+<li>Click “Choose a license template”</li>
+<li>Select <strong>BSD 3-Clause License</strong>
 </li>
-<li>Select MIT, Apache-2.0, or GPL-3.0</li>
+<li>Update the copyright holder to “The Regents of the University of
+California” (if UC-owned)</li>
+<li>Update the year to 2025</li>
 <li>Commit the file</li>
-</ul>
-<p>GitHub will automatically tag your project with the chosen SPDX
-identifier.</p>
+</ol>
+<p><strong>Verify:</strong> Refresh your repository page. Do you see
+“BSD-3-Clause license” displayed?</p>
 </div>
-<div class="section level3">
-<h3 id="step-2-communicate-your-license-in-documentation">Step 2: Communicate your license in documentation<a class="anchor" aria-label="anchor" href="#step-2-communicate-your-license-in-documentation"></a>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>You should see “BSD-3-Clause license” in the repository sidebar.
+GitHub automatically detects and displays your license.</p>
+<p>Your LICENSE file should start with:</p>
+<pre><code>BSD 3-Clause License
+
+Copyright (c) 2025, The Regents of the University of California
+All rights reserved.</code></pre>
+<p>If you don’t see the license badge: - Check the file is named exactly
+<code>LICENSE</code> (no extension) - Verify it’s in the root directory
+- Confirm you committed the changes</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="communicating-your-license">Communicating your license<a class="anchor" aria-label="anchor" href="#communicating-your-license"></a>
+</h2>
+<hr class="half-width">
+<p>After adding a LICENSE file, reference it in your README so users
+immediately understand usage terms.</p>
+<p>Add this section near the top of your README:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<p>Add a short note to your README:</p>
-<blockquote>
-<p>This project is licensed under the MIT License. See
-<code>LICENSE</code> for details.</p>
-</blockquote>
-<p>This improves discoverability and reduces ambiguity for users.</p>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">## License</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>This project is licensed under the BSD 3-Clause License - see the <span class="co">[</span><span class="ot">LICENSE</span><span class="co">](LICENSE)</span> file for details.</span></code></pre>
 </div>
-</div>
-</div>
-</div>
-<div id="exercise-compare-permissive-and-copyleft-licenses" class="callout discussion">
+<p><strong>Why this matters:</strong> Users reading your README on
+platforms other than GitHub (Zenodo, email, exported PDFs) will see your
+license terms even without GitHub’s automatic detection.</p>
+<div id="exercise-license-scenarios" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<span class="callout-header">Discussion</span>
-<div id="exercise-compare-permissive-and-copyleft-licenses" class="callout-inner">
-<h3 class="callout-title">Exercise: Compare permissive and copyleft
-licenses</h3>
+<span class="callout-header">Challenge</span>
+<div id="exercise-license-scenarios" class="callout-inner">
+<h3 class="callout-title">Exercise: License Scenarios</h3>
 <div class="callout-content">
-<p>Read these two short license descriptions provided in the lesson
-material. In small groups or pairs:</p>
-<ul>
-<li>Identify what freedoms each license provides</li>
-<li>Identify one scenario where each license might be preferred</li>
-</ul>
-<p>Share one observation with the group.</p>
+<p>Which license would you recommend for each UC research scenario?</p>
+<p><strong>Scenario 1:</strong> A Python package for ecological data
+analysis. You want maximum adoption across academia and industry.</p>
+<p><strong>Scenario 2:</strong> A data visualization tool developed with
+a biotech partner who may commercialize derivatives.</p>
+<p><strong>Scenario 3:</strong> A simple utility script you’re sharing
+with collaborators.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
+recommendation, maximum flexibility and adoption)</p>
+<p><strong>Scenario 2:</strong> Apache 2.0 (explicit patent protection
+important for industry partnerships)</p>
+<p><strong>Scenario 3:</strong> Either BSD 3-Clause or MIT (both work
+well for simple sharing; BSD preferred by UC)</p>
+<p>In all cases, verify with your campus Tech Transfer office before
+releasing.</p>
+</div>
 </div>
 </div>
 </div>
@@ -800,28 +886,25 @@ material. In small groups or pairs:</p>
 </h2>
 <hr class="half-width">
 <p>Licensing is foundational to making research software usable,
-citable, and shareable. In this episode, you selected an appropriate
-open-source license and added it to a repository. In the next episode,
-we will connect licensing with making software <em>citable</em> and
-<em>discoverable</em>, continuing to build the scaffolding that supports
-open, sustainable research software.</p>
-<div id="key-points" class="callout keypoints">
+citable, and shareable. In this episode, you added a BSD license to a
+repository following UC recommendations.</p>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <span class="callout-header">Key Points</span>
-<div id="key-points" class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
+<div class="callout-inner">
 <div class="callout-content">
 <ul>
 <li>Without a license, software is legally restricted and not
 reusable</li>
-<li>Open-source licenses communicate clear permissions and
-expectations</li>
-<li>Permissive licenses maximize flexibility</li>
-<li>Copyleft licenses preserve openness</li>
-<li>GitHub supports adding standardized license files through
-templates</li>
+<li>UC recommends BSD 3-Clause as the default license for most
+projects</li>
+<li>Permissive licenses (BSD, MIT, Apache 2.0) maximize flexibility and
+adoption</li>
+<li>Always consult your campus Tech Transfer office for UC-owned
+software</li>
+<li>GitHub makes adding standard licenses straightforward</li>
 </ul>
 </div>
 </div>
@@ -1257,7 +1340,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Typical missing pieces include:</p>
 <ul>
@@ -1293,7 +1376,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>A valid minimal example:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -1483,7 +1566,7 @@ this version?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Useful release notes include:</p>
 <ul>
@@ -1543,7 +1626,7 @@ rather than the whole project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Versioned DOIs:</p>
 <ul>
@@ -1753,7 +1836,7 @@ discoverability.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
@@ -1789,7 +1872,7 @@ metadata:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open your Zenodo record.<br>
@@ -1905,7 +1988,7 @@ What’s missing?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The script should be citable so that others can properly credit its
 use. Without citation metadata or a DOI, the software may go
@@ -2000,7 +2083,7 @@ current or future project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Answers may vary: making a repo public, adding a license, archiving
 on Zenodo, writing a README, creating a CITATION file, etc.</p>
@@ -2026,7 +2109,7 @@ software more FAIR.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
