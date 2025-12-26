@@ -56,7 +56,6 @@ Good metadata answers predictable questions with minimal effort from the reader:
 
 You may add these in multiple places, but they should remain consistent.
 
----
 
 ## GitHub-specific discoverability features
 
