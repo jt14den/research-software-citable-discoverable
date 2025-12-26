@@ -346,7 +346,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Sharing Research Software Effectively</h1>
-        <p>Last updated on 2025-12-06 |
+        <p>Last updated on 2025-12-26 |
 
         <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/episodes/sharing-software.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -394,14 +394,14 @@ find, understand, reuse, and cite your work. This visibility strengthens
 the transparency of your research process and increases the likelihood
 that you receive formal credit.</p>
 <p>In this lesson, we start with a minimal example repository. As you
-move through the episodes, you will progressively improve it until it
-becomes citable, discoverable, and ready for reuse.</p>
+progress through the episodes, you will progressively refine them until
+they are citable, discoverable, and ready for reuse.</p>
 <div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Use <strong>progressive disclosure</strong> by showing only the
 top-level structure of the demo repository first.<br>
@@ -409,8 +409,6 @@ If learners are new to GitHub, you may display two contrasting
 examples:<br>
 - a sparse, hard-to-understand repo<br>
 - a clear, well-documented repo</p>
-<p>This contrast reduces cognitive load and helps learners recognize
-what “good” looks like.</p>
 </div>
 </div>
 </div>
@@ -431,38 +429,25 @@ of the example repository:</p>
 research software practice.<br>
 By the end of the lesson, it will include licensing, citation metadata,
 improved discoverability information, and versioning.</p>
-<div id="why-make-a-repository-public" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="why-make-a-repository-public" class="callout-inner">
-<h3 class="callout-title">Why Make a Repository Public?</h3>
-<div class="callout-content">
-<p>Public repositories help you:</p>
-<ul><li>share methods transparently<br></li>
-<li>get recognition for software contributions<br></li>
-<li>collaborate more easily<br></li>
-<li>comply with FAIR4RS recommendations<br></li>
-<li>enable DOI assignment for citation</li>
-</ul></div>
-</div>
-</div>
-<hr><div id="challenge-1-explore-what-makes-a-repository-useful" class="callout challenge">
+<div id="challenge-1-what-makes-a-repository-reusable" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-explore-what-makes-a-repository-useful" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Explore What Makes a Repository
-Useful</h3>
+<div id="challenge-1-what-makes-a-repository-reusable" class="callout-inner">
+<h3 class="callout-title">Challenge 1: What Makes a Repository
+Reusable?</h3>
 <div class="callout-content">
-<p>Visit any public GitHub repository (your own or a well-known
-project).<br>
-Identify:</p>
-<ul><li>What information helps you understand or reuse the software?</li>
-<li>What appears to be missing?</li>
-</ul></div>
+<p>Could you think about the last time you tried to use someone else’s
+code?</p>
+<p>If you have a public GitHub repository, open it now. If not, visit a
+repository from your field that you’ve used or seen cited.</p>
+<p>Check for these elements: - [ ] README explaining purpose and usage -
+[ ] License file - [ ] Clear file organization<br>
+- [ ] Installation/usage instructions - [ ] Citation information</p>
+<p>Which of these elements help most? Which would you add to your own
+work first?</p>
+</div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
@@ -470,7 +455,7 @@ Identify:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Useful elements commonly include:</p>
 <ul><li>README with context and usage<br></li>
@@ -485,21 +470,22 @@ or no license.</p>
 </div>
 </div>
 </div>
-<hr><div id="challenge-2-examine-the-demo-repository" class="callout challenge">
+<hr><div id="challenge-2-inventory-the-demo-repository" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-examine-the-demo-repository" class="callout-inner">
-<h3 class="callout-title">Challenge 2: Examine the Demo Repository</h3>
+<div id="challenge-2-inventory-the-demo-repository" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Inventory the Demo
+Repository</h3>
 <div class="callout-content">
 <p>Open the <strong>software-demo</strong> repository you
 downloaded.</p>
-<ul><li>What do you notice about its structure?</li>
-<li>What information is present?</li>
-<li>What information would you expect to see but is not yet
-included?</li>
-</ul></div>
+<p>Spend 2 minutes exploring, then answer: - Could you run this code
+today? What’s missing? - Would you know who created it or how to credit
+them? - Could you legally reuse or modify it?</p>
+<p>We’ll address these gaps together over the next episodes.</p>
+</div>
 </div>
 </div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
@@ -507,7 +493,7 @@ included?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Learners may observe:</p>
 <ul><li>README is minimal<br></li>
@@ -600,8 +586,8 @@ any links that you are not going to use.
   "url": "https://jt14den.github.io/research-software-citable-discoverable/instructor/sharing-software.html",
   "identifier": "https://jt14den.github.io/research-software-citable-discoverable/instructor/sharing-software.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2025-12-06",
-  "datePublished": "2025-12-23"
+  "dateModified": "2025-12-26",
+  "datePublished": "2025-12-26"
 }
 
   </script><script>
