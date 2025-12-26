@@ -34,18 +34,15 @@ Before beginning this lesson, learners should be able to:
 - understand basic Git concepts such as commits and repositories.
 - edit plain-text files in any text editor.
 
-No prior experience with software packaging, metadata standards, or licensing is required.
+You don't need any prior experience with software packaging, metadata standards, or licensing.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::: callout
-
 ## Acknowledgment
 
-This lesson draws inspiration from the *Building Better Research Software* curriculum, created by  
-Sarah Gibson, Aman Goel, Toby Hodges, Sarah Jaffa, Kamilla Kopec-Harding,  
-Aleksandra Nenadic, Colin Sauze, and Sarah Stevens.  
+This lesson is derived from the *Building Better Research Software* curriculum, created by Sarah Gibson, Aman Goel, Toby Hodges, Sarah Jaffa, Kamilla Kopec-Harding, Aleksandra Nenadic, Colin Sauze, and Sarah Stevens.
 
-A full citation and DOI for the original lesson appear on this lesson’s “Cite This Lesson” page, automatically generated from the repository’s CITATION.cff file.
+A full citation and DOI for the original lesson appear on this lesson's [Cite This Lesson](../index.html#citing) page, automatically generated from the repository's CITATION.cff file.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
