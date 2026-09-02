@@ -422,14 +422,14 @@ maintained.</p>
 </h2>
 <hr class="half-width">
 <p>This lesson serves two overlapping audiences: people who write
-research software, and the library / OSPO / research-support staff who
-advise them. In practice your room will often be a mix, and sometimes it
-will be mostly researchers even when the workshop was billed for
-librarians. Plan to flex the framing live rather than committing to one
+research software and the library/OSPO/research-support staff who advise
+them. In practice, your room will often be a mix, and sometimes it will
+be mostly researchers even when the workshop was billed for librarians.
+Plan to flex the framing in real time rather than commit to one
 persona.</p>
-<p>The hands-on body is audience-neutral. The keystrokes to add a
-license, a <code>CITATION.cff</code>, or a Zenodo DOI are the same no
-matter who runs them. The audience-specific layer lives in two
+<p>The hands-on body is audience-neutral. The keystrokes for adding a
+license, a <code>CITATION.cff</code>, or a Zenodo DOI are the same
+regardless of who runs them. The audience-specific layer lives in two
 places:</p>
 <ul>
 <li>
@@ -466,9 +466,9 @@ repositories.</p>
 alongside the hands-on one. The hands-on objective is “can you do this
 step”; the supporting objective is “can you advise, teach, or triage it
 for someone else.” With a support-staff audience, hold learners to the
-second objective too, not just task completion. The “Build your campus
-playbook” challenge in the wrap-up is where that second objective gets
-produced as a take-home artifact, so leave time for it.</p>
+second objective as well, not just to task completion. The “Build your
+campus playbook” challenge in the wrap-up is where that second objective
+gets produced as a take-home artifact, so leave time for it.</p>
 </div>
 <div class="section level3">
 <h3 id="predict-then-reveal">Predict-then-reveal<a class="anchor" aria-label="anchor" href="#predict-then-reveal"></a>
@@ -538,15 +538,16 @@ their own <code>main</code>. Because you forked the same starting state,
 your screen and theirs stay in sync.</p>
 <blockquote>
 <p><strong>Use a fresh fork for each teaching.</strong> Delete and
-re-fork (or reset) between workshops so you always start from the bare
-state, not last session’s finished repo.</p>
+re-fork (or reset) between workshops so you always start from a clean
+slate, not the last session’s finished repo.</p>
 </blockquote>
 </section><section><h2 class="section-heading" id="the-reference-branches">The reference branches<a class="anchor" aria-label="anchor" href="#the-reference-branches"></a>
 </h2>
 <hr class="half-width">
-<p>The upstream repository keeps view-only <strong>reference
-branches</strong> showing the target state after each episode. Learners
-never build on them; they’re an answer key and a catch-up aid.</p>
+<p>The upstream repository maintains view-only <strong>reference
+branches</strong> that show the target state after each episode.
+Learners never build on them; they’re an answer key and a catch-up
+aid.</p>
 <table class="table">
 <colgroup>
 <col width="50%">
@@ -591,9 +592,9 @@ forward when they fell behind. The web workflow has no equivalent, and
 it doesn’t need one: each episode adds an <strong>independent</strong>
 file (license, then citation, then release, then metadata), so a learner
 who misses one is never <em>blocked</em>, just less complete. To catch
-up, they open the relevant reference branch upstream and copy the one
-file they’re missing into their own <code>main</code>. Point this out
-once, early, then let the reference branches sit in the background.</p>
+up, they open the relevant upstream reference branch and copy the
+missing file into their own <code>main</code>. Point this out once,
+early, then let the reference branches sit in the background.</p>
 <p><strong>Pixi is out of the main chain.</strong> Unlike the old demo
 repo, the <code>after-*</code> branches contain <strong>no</strong> pixi
 files. Pixi lives only on <code>optional-pixi</code>, which branches off
@@ -614,8 +615,9 @@ Learners who accidentally create records on the live site cannot delete
 them. Warn the group before this step.</p>
 <p><strong>YAML indentation errors in CITATION.cff</strong> Direct
 learners to the cffinit web tool (<a href="https://citation-file-format.github.io/cffinit/" class="external-link uri">https://citation-file-format.github.io/cffinit/</a>) rather
-than hand-editing YAML. This eliminates most formatting errors.</p>
-<p><strong>Pixi not installed</strong> Pixi is optional and learners do
+than having them hand-edit YAML. This eliminates most formatting
+errors.</p>
+<p><strong>Pixi not installed</strong> Pixi is optional, and learners do
 not need it installed to complete the citation-focused track. If running
 the full track, verify pixi installation during setup. The pixi episode
 callout already marks it optional so learners who skip it can rejoin
