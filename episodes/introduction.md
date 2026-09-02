@@ -26,7 +26,7 @@ exercises: 7
 
 A faculty member emails: *"The journal accepted my paper, but they want a citable version of the code, with a DOI. How do I do that?"*
 
-Ten years ago the same question arrived about datasets, and the library built the answer. When a journal article is published, a whole system catches it: a persistent identifier, a catalog record, a citation format, a preservation copy. Datasets got that treatment over the last fifteen years. Software — the third thing modern research runs on — mostly hasn't. This lesson is about extending the system you already run, identifiers, metadata, preservation, and discoverability, to the one research output it has been quietly missing.
+Ten years ago, the same question arrived about datasets, and the library built the answer. When a journal article is published, a whole system catches it: a persistent identifier, a catalog record, a citation format, a preservation copy. Datasets got that treatment over the last fifteen years. Software — the third thing modern research runs on — mostly hasn't. This lesson is about extending the system you already run, identifiers, metadata, preservation, and discoverability, to the one research output it has been quietly missing.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
@@ -110,9 +110,9 @@ Nobody publishes results from a telescope without saying which telescope, which 
 
 Credit is the first problem; survival is the second. Most research code lives on one laptop, in one person's head, under one person's account.
 
-**The Bus Factor:** the number of people who need to be "hit by a bus" before a project becomes unmaintainable. For most research code the answer is one.
+**The Bus Factor:** the number of people who need to be "hit by a bus" before a project becomes unmaintainable. For most research code, the answer is one.
 
-Restated for collections people: how many people would have to leave before this software becomes unrecoverable? A library would never accept a collection with a bus factor of one, and that is exactly what an un-deposited, un-documented repository is. Depositing a release into an archive like Zenodo is the software equivalent of accessioning: it moves the object out of a personal account and into a preservation system that outlives the individual.
+Restated for collections people: how many people would have to leave before this software becomes unrecoverable? A library would never accept a collection with a bus factor of one, and that is exactly what an un-deposited, un-documented repository is. Depositing a release into an archive like Zenodo is the software equivalent of accessioning: it moves the object from a personal account to a preservation system that outlives the individual.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -129,7 +129,7 @@ Research software that lives only on one person's machine:
 
 ## Can Anyone Actually Run It?
 
-There is a third problem, and it is the one researchers feel first: software that runs on its author's machine and nowhere else. With undocumented dependencies and an unstated language version, a colleague who tries to run it sees something like:
+There is a third problem, and it is the one researchers feel first: software that runs only on its author's machine. With undocumented dependencies and an unstated language version, a colleague who tries to run it sees something like:
 
 ```output
 $ python src/analysis.py
