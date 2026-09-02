@@ -22,7 +22,7 @@ exercises: 10
 
 ## Findability comes from description
 
-A Zenodo record with a bare title and no keywords is a catalog record with no subject headings: retrievable if you already know it exists, invisible if you don't. Most research software sits behind exactly that kind of record. This episode is the one where the lesson lands fully inside a library audience's expertise, because making things findable through description is what libraries do. The systems are GitHub topics, Zenodo fields, and a README instead of a catalog, but the judgment, what would a seeker search for and does this record contain it, is unchanged.
+A Zenodo record with a bare title and no keywords is a catalog record with no subject headings: retrievable if you already know it exists, invisible if you don't. Most research software sits behind exactly that kind of record. This episode is the one where the lesson lands fully inside a library audience's expertise, because making things findable through description is what libraries do. The systems are GitHub topics, Zenodo fields, and a README instead of a catalog, but the judgment- what would a seeker search for and does this record contain it- is unchanged.
 
 Clear metadata helps others understand, evaluate, and *find* your software.  
 
@@ -33,7 +33,8 @@ Clear metadata helps others understand, evaluate, and *find* your software.
 Make **README improvements and GitHub topics** the hands-on work here. Treat `.zenodo.json`, Software Heritage, `CONTRIBUTING.md`, and `CODE_OF_CONDUCT.md` as instructor demo or optional reading. In a half-day workshop, do not make every extension a hands-on task; it is the fastest way to run out of time before the wrap-up.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-It also reduces the cognitive effort for future users because essential information is organized and easy to locate.
+
+It also reduces cognitive effort for future users by organizing essential information and making it easy to locate.
 
 In earlier episodes, you created:
 
@@ -42,7 +43,7 @@ In earlier episodes, you created:
 - a **repository structure**  
 - a **Zenodo record with a DOI**
 
-This episode brings these together. You will describe your project in consistent ways across platforms so search engines, citation tools, and colleagues can discover it.
+This episode brings these together. You will describe your project consistently across platforms so that search engines, citation tools, and colleagues can discover it.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
@@ -233,7 +234,7 @@ Two caveats worth passing on in a consultation: most of this only appears **afte
 
 ## Institutional Repositories: Dataverse, Dryad, and Zenodo
 
-Many institutions use repositories like **Dataverse** or **Dryad** for research data deposits. These are good for datasets but have limited software support; they don't integrate with GitHub releases or mint version-specific DOIs automatically.
+Many institutions use repositories like **Dataverse** or **Dryad** for research data deposits. These are good for datasets but have limited software support; they don't automatically integrate with GitHub releases or mint version-specific DOIs.
 
 For software, **Zenodo is the recommended deposit location** because:
 
@@ -256,7 +257,7 @@ Some funders (NSF, NIH, Wellcome Trust) have specific deposit requirements. Chec
 
 ### UC-specific: Dryad and Zenodo already talk to each other
 
-All UC campuses have a premium Dryad subscription. If you deposit a study's data in Dryad, Dryad prompts you to also deposit the associated code in Zenodo, and the two deposits automatically cross-reference each other. If your project already has a Dryad data deposit, check there first before setting up the Zenodo link manually.
+All UC campuses have a premium Dryad subscription. If you deposit a study's data in Dryad, Dryad prompts you to also deposit the associated code in Zenodo, and the two deposits automatically cross-reference each other. If your project already has a Dryad data deposit, check there before manually setting up the Zenodo link.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -302,7 +303,7 @@ Your goal is *context*. A researcher or a librarian helping a researcher should 
 
 ### Supporting others
 
-Metadata work is where libraries already have deep expertise, so this is the most natural consultation territory in the lesson. The trap is trying to perfect everything at once. In practice you are doing triage: identifying the **single highest-value fix** for the time the researcher actually has.
+Metadata work is an area where libraries already have deep expertise, so it is the most natural consultation territory in the lesson. The trap is trying to perfect everything at once. In practice, you are doing triage: identifying the **single highest-value fix** for the time the researcher actually has.
 
 A rough priority order when a record or repo is thin:
 
@@ -311,7 +312,7 @@ A rough priority order when a record or repo is thin:
 3. **Keywords** reused consistently across GitHub Topics, `CITATION.cff`, and Zenodo.
 4. **Related works** linking the software to its paper, dataset, and grant.
 
-Because this metadata is harvested by DataCite, library discovery layers, and Google Scholar, the librarian framing is concrete: thin metadata means the software never surfaces in the catalog alongside the article. You are not just tidying a record, you are deciding whether it is findable at all.
+Because this metadata is harvested by DataCite, library discovery layers, and Google Scholar, the librarian framing is concrete: thin metadata means the software never surfaces the article in the catalog. You are not just tidying a record; you are deciding whether it is findable at all.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -359,7 +360,7 @@ After generating a DOI in the earlier episode, expand its metadata:
 
 ### Which change makes it discoverable?
 
-A researcher's tool has been public on GitHub for a year, but no one outside their lab has ever found it. The repository has a one-line README, no topics, and a Zenodo deposit with only a title. Which **single** change will do the most to make the software discoverable?
+A researcher's tool has been public on GitHub for a year, but no one outside their lab has ever found it. The repository has a one-line README, no topics, and a Zenodo deposit with only a title. Which **single** change will have the greatest impact on making the software discoverable?
 
 A. Add collaborators so the repository is "more public"
 
@@ -371,7 +372,7 @@ D. Rename the repository to something shorter and catchier
 
 :::::::::::::::::::::::: solution
 
-**B.** Discovery happens through *description*, not access level or activity. Topics, keywords, and descriptions are what GitHub search, Zenodo, and DataCite-fed indexes actually match a query against. The repo is already public, so **A** adds nothing to discoverability; commit frequency (**C**) does not affect search ranking for discovery; and a shorter name (**D**) is cosmetic. This is the same reason a catalog record with no subject headings is nearly invisible: findability comes from the metadata, not from the object's mere existence.
+**B.** Discovery happens through *description*, not access level or activity. Topics, keywords, and descriptions are what GitHub search, Zenodo, and DataCite-fed indexes actually match against when processing a query. The repo is already public, so **A** adds nothing to discoverability; commit frequency (**C**) does not affect search ranking for discovery; and a shorter name (**D**) is cosmetic. This is the same reason a catalog record with no subject headings is nearly invisible: findability comes from the metadata, not from the object's mere existence.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
