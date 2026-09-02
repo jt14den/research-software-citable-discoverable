@@ -58,7 +58,7 @@ The [`optional-pixi` reference branch][branch-optional-pixi] builds on [`after-m
 
 ## Why Environments Matter
 
-Digital preservation learned this lesson the hard way: keeping the file is not enough if nobody records what is needed to open it. A WordPerfect document with no format metadata is preserved and unreadable at the same time. Code has the same failure mode. A script depends on specific versions of specific packages, and if that goes unrecorded, the code you carefully licensed, cited, and deposited will not actually run for the person who finds it. An environment file with a lockfile is format metadata for execution: it records, exactly, what this code needs.
+Digital preservation learned this lesson the hard way: keeping the file is not enough if nobody records what is needed to open it. A WordPerfect document with no format metadata is preserved yet unreadable. Code has the same failure mode. A script depends on specific versions of specific packages, and if that goes unrecorded, the code you carefully licensed, cited, and deposited will not actually run for the person who finds it. An environment file with a lockfile is format metadata for execution: it records, exactly, what this code needs.
 
 **The Problem:** Research software often "works on my machine" and nowhere else.
 
@@ -126,7 +126,7 @@ Environment management reduces this friction because it captures:
 
 ### A licensing trap pixi avoids by default
 
-Anaconda's `defaults` channel requires a paid license for commercial use at organizations over 200 employees, UC included, and Anaconda has sent enforcement letters to institutions it considers out of compliance. It is easy to pull packages from `defaults` without realizing it if you install plain Anaconda or Miniconda and never change the channel. `conda-forge`, the channel `pixi` uses out of the box, is community-maintained and free for all use, including commercial. Using `pixi` (or `conda`/`mamba` explicitly pointed at `conda-forge`) sidesteps this risk instead of requiring learners to remember to configure it.
+Anaconda's `defaults` channel requires a paid license for commercial use at organizations over 200 employees, UC included, and Anaconda has sent enforcement letters to institutions it considers out of compliance. It is easy to pull packages from `defaults` without realizing it if you install plain Anaconda or Miniconda and never change the channel. `conda-forge`, the channel `pixi` uses out of the box, is community-maintained and free for all use, including commercial. Using `pixi` (or `conda`/`mamba` explicitly pointed to `conda-forge`) sidesteps this risk rather than requiring learners to remember to configure it.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -143,7 +143,6 @@ This is a fast-moving space. Treat this as our current read, not a permanent ver
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
----
 
 ::::::::::::::::::::::::::::::::::::: instructor
 
