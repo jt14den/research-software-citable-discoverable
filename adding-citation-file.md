@@ -14,20 +14,20 @@ exercises: 12
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain the role of CITATION.cff in software citation.
-- Create and customize a CITATION.cff file in a GitHub repository.
+- Explain the role of `CITATION.cff` in software citation.
+- Create and customize a `CITATION.cff` file in a GitHub repository.
 - Describe how the file connects to later steps like releases and DOIs.
-- **Supporting others:** coach a researcher through a CITATION.cff and recognize when authorship is a referral, not a metadata fix.
+- Coach a researcher through a `CITATION.cff` and recognize when authorship is a referral, not a metadata fix.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## A catalog record for your software
 
-When someone wants to cite a book, nobody emails the author to ask how. The catalog record answers it. Software has lacked that record, so people improvise: they cite a URL, or the paper the code appeared in, or nothing. A **CITATION.cff** file is the catalog record for a repository, a short structured-metadata file that says exactly who to credit and how. Once it exists, GitHub grows a "Cite this repository" button, and the guesswork ends.
+When someone wants to cite a book, nobody emails the author to ask how. The catalog record answers it. Software has lacked that record, so people improvise: they cite a URL, or the paper the code appeared in, or nothing. A **CITATION.cff** file is the catalog record for a repository, a short, structured metadata file that specifies exactly who to credit and how. Once it exists, GitHub grows a "Cite this repository" button, and the guesswork ends.
 
 Every librarian has shown a student the "Cite" button on a database record and watched the relief. This is the same button, on code, and the researcher controls what it says. Without the file, everyone who wants to cite the software writes their own version of the reference, and the credit scatters across formats no index can reconcile.
 
-A CITATION.cff file is the simplest, most direct way to make your software citable. It provides structured citation metadata that:
+A `CITATION.cff` file is the simplest, most direct way to make your software citable. It provides structured citation metadata that:
 
 - tells others how to reference your work  
 - allows GitHub to display a “**Cite this repository**” button  
