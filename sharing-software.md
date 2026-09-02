@@ -38,7 +38,7 @@ In this lesson, we start with a minimal example repository (your fork's `main` b
 
 ### Preparing to teach this episode
 
-Teach from **your own fork** of the demo repository, exactly as learners do, so everyone is looking at the same starting state. See the **Instructor Notes** for the one-time fork setup. During the lesson you demonstrate each step live in your fork's web interface and learners mirror it in theirs.
+Teach from **your own fork** of the demo repository, exactly as learners do, so everyone starts from the same state. See the **Instructor Notes** for the one-time fork setup. During the lesson, you demonstrate each step live in your fork's web interface, and learners mirror it in theirs.
 
 To show the "before and after" contrast, use the branch dropdown in the browser:
 
