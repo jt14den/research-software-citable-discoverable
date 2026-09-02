@@ -21,7 +21,7 @@ exercises: 12
 
 ## Curation Work, Not Code Work
 
-The repository this lesson started with was fragile in a specific, diagnosable way: no rights statement, no citation record, no version anyone could pin, no description a search could find. Each episode added one piece of scholarly infrastructure, and none of it required writing code. That is the pattern worth carrying out of the room: making software citable and discoverable is curation work, and curation work is what this audience already does for a living.
+The repository this lesson started with was fragile in a specific, diagnosable way: no rights statement, no citation record, no version anyone could pin, no description a search could find. Each episode added one piece of scholarly infrastructure, and none of it required writing code. That is the pattern worth carrying out of the room: making software citable and discoverable is curation work, and this audience already does that for a living.
 
 ## Your FAIR4RS Checklist
 
@@ -118,7 +118,7 @@ If you came to this lesson to support researchers rather than to publish your ow
 - **Open-source strategy, policy, community** → your campus OSPO
 - **Contested authorship or credit** → surface to the collaborators; do not arbitrate
 
-Fill in the actual names and contacts for your campus and you have a reusable service, not a one-off answer.
+Fill in the actual names and contacts for your campus, and you have a reusable service, not a one-off answer.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -153,7 +153,7 @@ There is no single right answer; the artifact is the point. A strong playbook na
 
 ### Going further: the next layer
 
-Citable and discoverable is the foundation, not the finish line. Once a project has a license, a citation file, and a DOI, the next questions are about *project health*: is it secure, maintained, and safe to build on? [OpenSSF Scorecards](https://securityscorecards.dev/) scores a repository against those practices and is becoming a common signal across the open-source ecosystem, and [REUSE](https://reuse.software/) does the same specifically for license and copyright compliance — both are a separate skill from what we covered here. On the credit side, the [FORCE11 Software Citation Principles](https://doi.org/10.7717/peerj-cs.86) are the standard the `CITATION.cff` work in this lesson rests on. All three are good next stops for anyone building out an academic OSPO's teaching.
+Citable and discoverable is the foundation, not the finish line. Once a project has a license, a citation file, and a DOI, the next questions concern *project health*: is it secure, well-maintained, and safe to build on? [OpenSSF Scorecards](https://securityscorecards.dev/) score a repository against those practices and are becoming a common signal across the open-source ecosystem, and [REUSE](https://reuse.software/) does the same specifically for license and copyright compliance — both are separate skills from what we covered here. On the credit side, the [FORCE11 Software Citation Principles](https://doi.org/10.7717/peerj-cs.86) are the standard the `CITATION.cff` work in this lesson rests on. All three are good next stops for anyone building out an academic OSPO's teaching.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
