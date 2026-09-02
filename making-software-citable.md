@@ -23,7 +23,7 @@ exercises: 13
 
 ## Why a repository is not an archive
 
-A GitHub repository is a workshop, not an archive. The code changes daily, the URL can break, and "the version we used" means nothing without a marker. This episode adds the two things scholarly infrastructure needs to take software seriously: a **release**, which freezes a named version, and a **Zenodo DOI**, which gives that frozen version a persistent identifier and a preservation copy outside GitHub entirely. After this step, the software can be cited the way an article is cited, and the citation still resolves in twenty years.
+A GitHub repository is a workshop, not an archive. The code changes daily, the URL can break, and "the version we used" means nothing without a marker. This episode adds the two things scholarly infrastructure needs to take software seriously: a **release**, which freezes a named version, and a **Zenodo DOI**, which gives that frozen version a persistent identifier and a preservation copy outside GitHub entirely. After this step, the software can be cited like an article, and the citation still resolves in 20 years.
 
 Software is a research product.  
 Like articles and datasets, it should be **cited** so others can acknowledge your work, find the exact version you used, and understand how your software contributed to their results.
@@ -107,7 +107,7 @@ You might wonder why we chose `v0.1.0`. This follows **Semantic Versioning** (`M
 
 - **MAJOR** version when you make incompatible API changes (e.g., `1.0.0`)
 - **MINOR** version when you add functionality in a backward compatible manner (e.g., `0.1.0` -> `0.2.0`)
-- **PATCH** version when you make backward compatible bug fixes (e.g., `0.1.1`)
+- **PATCH** version when you make backward-compatible bug fixes (e.g., `0.1.1`)
 
 Starting with `0.x.x` indicates your software is in initial development and the API is not yet stable.
 
@@ -144,7 +144,7 @@ Clear release notes help both people and tools interpret your software’s evolu
 
 ### Say this out loud before you screen share
 
-Use `sandbox.zenodo.org`, not production Zenodo. Real Zenodo records and DOIs are persistent and cannot be deleted, so they are not appropriate for practice. Say it before you share your screen, and have helpers watch for learners who land on `zenodo.org` by habit.
+Use `sandbox.zenodo.org`, not production Zenodo. Real Zenodo records and DOIs are persistent and cannot be deleted, so they are not appropriate for practice. Say it before you share your screen, and have helpers watch for learners who, by habit, land on `zenodo.org`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
