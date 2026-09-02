@@ -25,9 +25,9 @@ The deck and this lesson are maintained independently. The slides are the canoni
 
 ## Reading the Room: Researchers vs. Support Staff
 
-This lesson serves two overlapping audiences: people who write research software, and the library / OSPO / research-support staff who advise them. In practice your room will often be a mix, and sometimes it will be mostly researchers even when the workshop was billed for librarians. Plan to flex the framing live rather than committing to one persona.
+This lesson serves two overlapping audiences: people who write research software and the library/OSPO/research-support staff who advise them. In practice, your room will often be a mix, and sometimes it will be mostly researchers even when the workshop was billed for librarians. Plan to flex the framing in real time rather than commit to one persona.
 
-The hands-on body is audience-neutral. The keystrokes to add a license, a `CITATION.cff`, or a Zenodo DOI are the same no matter who runs them. The audience-specific layer lives in two places:
+The hands-on body is audience-neutral. The keystrokes for adding a license, a `CITATION.cff`, or a Zenodo DOI are the same regardless of who runs them. The audience-specific layer lives in two places:
 
 - **"Supporting others" callouts** in each episode are learner-facing asides that recast the technical step as advising and consultation work. If your room is mostly support staff, slow down and discuss these: ask "who on your campus owns this step, and when would you refer it out?" If your room is mostly researchers, read past them quickly or skip them.
 - **These instructor notes** are the meta layer for you.
@@ -42,7 +42,7 @@ If your audience is purely researchers, treat the "Supporting others" boxes as o
 
 ### Two objectives per episode
 
-Each episode lists a **Supporting others** objective alongside the hands-on one. The hands-on objective is "can you do this step"; the supporting objective is "can you advise, teach, or triage it for someone else." With a support-staff audience, hold learners to the second objective too, not just task completion. The "Build your campus playbook" challenge in the wrap-up is where that second objective gets produced as a take-home artifact, so leave time for it.
+Each episode lists a **Supporting others** objective alongside the hands-on one. The hands-on objective is "can you do this step"; the supporting objective is "can you advise, teach, or triage it for someone else." With a support-staff audience, hold learners to the second objective as well, not just to task completion. The "Build your campus playbook" challenge in the wrap-up is where that second objective gets produced as a take-home artifact, so leave time for it.
 
 ### Predict-then-reveal
 
@@ -77,11 +77,11 @@ The whole lesson runs in the browser on a fork of `UC-OSPO-Network/software-demo
 
 **During the workshop**, demonstrate each step live in your fork and let learners mirror it in theirs. Everyone commits to their own `main`. Because you forked the same starting state, your screen and theirs stay in sync.
 
-> **Use a fresh fork for each teaching.** Delete and re-fork (or reset) between workshops so you always start from the bare state, not last session's finished repo.
+> **Use a fresh fork for each teaching.** Delete and re-fork (or reset) between workshops so you always start from a clean slate, not the last session's finished repo.
 
 ## The reference branches
 
-The upstream repository keeps view-only **reference branches** showing the target state after each episode. Learners never build on them; they're an answer key and a catch-up aid.
+The upstream repository maintains view-only **reference branches** that show the target state after each episode. Learners never build on them; they're an answer key and a catch-up aid.
 
 | Reference branch | State it shows |
 |---|---|
@@ -92,7 +92,7 @@ The upstream repository keeps view-only **reference branches** showing the targe
 | `after-metadata` | after Episode 5 (full metadata, the finished repo) |
 | `optional-pixi` | the optional pixi episode (branches off `after-metadata`) |
 
-**Why there's no per-episode "check out this branch" step anymore.** In the old command-line version, learners `git checkout`ed a branch to teleport their working state forward when they fell behind. The web workflow has no equivalent, and it doesn't need one: each episode adds an **independent** file (license, then citation, then release, then metadata), so a learner who misses one is never *blocked*, just less complete. To catch up, they open the relevant reference branch upstream and copy the one file they're missing into their own `main`. Point this out once, early, then let the reference branches sit in the background.
+**Why there's no per-episode "check out this branch" step anymore.** In the old command-line version, learners `git checkout`ed a branch to teleport their working state forward when they fell behind. The web workflow has no equivalent, and it doesn't need one: each episode adds an **independent** file (license, then citation, then release, then metadata), so a learner who misses one is never *blocked*, just less complete. To catch up, they open the relevant upstream reference branch and copy the missing file into their own `main`. Point this out once, early, then let the reference branches sit in the background.
 
 **Pixi is out of the main chain.** Unlike the old demo repo, the `after-*` branches contain **no** pixi files. Pixi lives only on `optional-pixi`, which branches off `after-metadata`. So learners on the citation-focused track never see stray `pixi.toml`/`pixi.lock` files, and there's nothing to explain away.
 
@@ -107,7 +107,7 @@ Learners need to commit the `CITATION.cff` file to the default branch and refres
 Use `sandbox.zenodo.org`, not the real `zenodo.org`. Learners who accidentally create records on the live site cannot delete them. Warn the group before this step.
 
 **YAML indentation errors in CITATION.cff**
-Direct learners to the cffinit web tool (<https://citation-file-format.github.io/cffinit/>) rather than hand-editing YAML. This eliminates most formatting errors.
+Direct learners to the cffinit web tool (<https://citation-file-format.github.io/cffinit/>) rather than having them hand-edit YAML. This eliminates most formatting errors.
 
 **Pixi not installed**
-Pixi is optional and learners do not need it installed to complete the citation-focused track. If running the full track, verify pixi installation during setup. The pixi episode callout already marks it optional so learners who skip it can rejoin cleanly.
+Pixi is optional, and learners do not need it installed to complete the citation-focused track. If running the full track, verify pixi installation during setup. The pixi episode callout already marks it optional so learners who skip it can rejoin cleanly.
