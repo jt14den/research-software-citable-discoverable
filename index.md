@@ -12,9 +12,9 @@ style='padding: 2%; max-width: 760px'}
 
 ## About This Lesson
 
-This lesson teaches the practical steps that make research software **citable, discoverable, and reusable**: choosing an open-source license, adding a `CITATION.cff` file, minting a DOI with a versioned release, and improving the metadata that helps people find and credit the software. An optional final episode covers reproducible environments with pixi. Together these steps map to the FAIR principles for research software (FAIR4RS).
+This lesson teaches the practical steps that make research software **citable, discoverable, and reusable**: choosing an open-source license, adding a `CITATION.cff` file, minting a DOI for a versioned release, and improving metadata to help people find and credit the software. An optional final episode covers reproducible environments with pixi. Together these steps map to the FAIR principles for research software (FAIR4RS).
 
-It is written first for **library, OSPO, and scholarly-communications staff** and other research-support professionals who help researchers make software count as a scholarly output. Each episode also carries a "Supporting others" thread for that consulting work. Researchers who write code and want to make it citable themselves will find the same steps apply directly to their own repositories.
+It is written first for **library, OSPO, and scholarly communications staff** and other research support professionals who help researchers make software count as scholarly output. Each episode also carries a "Supporting others" thread for that consulting work. Researchers who write code and want to make it citable themselves will find the same steps apply directly to their own repositories.
 
 Learners work in the browser, making small, high-value improvements to a real GitHub repository, and leave with both a citable project and a reusable way to advise others.
 
@@ -24,7 +24,7 @@ Learners work in the browser, making small, high-value improvements to a real Gi
 
 You'll work in your web browser, in your **own fork** of a small demo repository. Each episode adds one piece to your fork: a license, a citation file, a release with a DOI, then richer metadata. By the end you'll have a complete, citable repository you built yourself.
 
-The upstream repository keeps a set of view-only **reference branches** (`after-license`, `after-citation`, `after-release`, `after-metadata`) showing the target state after each episode. If you fall behind or want to check your work, open the matching branch in GitHub's branch dropdown and compare.
+The upstream repository maintains a set of view-only **reference branches** (`after-license`, `after-citation`, `after-release`, `after-metadata`) that show the target state after each episode. If you fall behind or want to check your work, open the matching branch in GitHub's branch dropdown and compare.
 
 The only episode that needs software installed on your computer is the **optional** pixi episode at the end. Everything else runs in the browser. See [Setup](learners/setup.md) to get ready.
 
@@ -46,7 +46,7 @@ After completing this lesson, learners will be able to:
 
 ## Prerequisites
 
-For the core lesson you need only a **GitHub account** and a **web browser**. Before beginning, it helps to be able to:
+For the core lesson, you need only a **GitHub account** and a **web browser**. Before beginning, it helps to be able to:
 
 - navigate GitHub in a web browser (view and edit files, open issues).
 - recognize basic Git concepts such as commits and repositories — you will *not* run Git locally.
